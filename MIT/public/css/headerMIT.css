@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    font: sans-serif;
+    font-weight: bold;
+    list-style-type: none;
+}
+div button span{
+    display: none;
+}
+nav{
+    position: fixed;
+    z-index: 999;
+    background-color: rgb(80, 0, 0);
+}
+div a{
+    text-decoration: none;
+    color: white;
+}
+nav div div .ul-hover{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ul-hover li{
+    list-style-type: none;
+}
+.ul-hover li a{
+    color: white;
+}
+.ul-hover li a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+}
+.button-show{
+    border: none;
+    background: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.offcanvas-body li{
+    position: relative;
+    transition: .3s;
+}
+.offcanvas-body li a{
+    font-family: sans-serif;
+    font-weight: bold;
+    color: black        ;
+}
+.offcanvas-body li:hover{
+    background-color: rgb(74, 109, 109);
+}
+
+.tamplate .txt .updates{
+    font-size: 1.2rem;
+    border-bottom: 1px solid red;
+
+}
+.off li{
+    list-style-type: none;
+}
+.showw {
+    z-index: 999;
+    opacity: 1;
+}
+.tamplate{
+    display: flex;
+    align-items: flex-end;
+    justify-self: center;
+}
+.button-show i{
+    margin: 10px 20px;
+    font-size: 2rem;
+}
+div .menubar{
+    display: none;
+}
+div .menubar button{
+    border: none;
+    background: none;
+}
+@media screen and (max-width:1250px) {
+    .ul-hover .ul-1{
+        display: none;
+    }
+}
+@media screen and (max-width:1000px) {
+    .ul-hover .ul-2{
+        display: none;
+    }
+}
+@media screen and (max-width:900px) {
+    .ul-hover .ul-3{
+        display: none;
+    }
+}
+@media screen and (max-width:800px) {
+    .ul-hover li{
+        display: none;
+    }
+    div .search-icon{
+        display: none;
+    }
+}
+@media screen and (max-width:799px) {
+
+   div .menubar{
+        display: block;
+   }
+}
+.ul-hover li a{
+    position: relative;
+
+}
+.ul-hover li a::after{
+    content: "";
+    position: absolute;
+    background-color: rgb(255, 0, 0);
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+.ul-hover li a:hover:after{
+    width: 100%;
+}

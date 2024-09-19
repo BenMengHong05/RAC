@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: black;
+}
+/* .box{
+    cursor: pointer;
+}
+.box:hover{
+    background-color: red;
+    color: white;
+}
+.footer-ul li{
+    list-style-type: none;
+}
+.footer-ul li a:hover{
+    color: red;
+}
+.footer-ul li a{
+    list-style-type: none;
+    border-bottom: 1px solid red;
+}
+.massachusetts:hover{
+    text-decoration: underline;
+}
+.footer-menu li a:hover{
+    color: red;
+}
+
+ @media screen and (max-width: 2000px) {
+    .show-menu{
+        display: none;
+    }
+    .show-menu div div ul li a{
+        color: black;
+    }
+
+ }
+@media screen and (max-width: 991px) {
+    .show-menu{
+        display: block;
+    }
+    .show-menu .footer-ul{
+        display: flex;
+    }
+    .show-menu .footer-ul div ul{
+        flex-direction: column;
+    }
+} */
+ .footer-head div ul li a{
+    color: black;
+    border-bottom: 1px solid red;
+    cursor: pointer;
+ }
+.footer-box{
+    width: 18vh;
+    border: 1px solid red;
+    height: 10vh;
+    cursor: pointer;
+}
+.footer-box:hover{
+   background-color: red;
+   color: white;
+}
+.footer-menu div ul li a{
+    color: black;
+    border-bottom: 1px solid red;
+}
+
+.footer-menu div ul li a:hover{
+    color: red;
+}
+@media screen and (max-width: 2000px) {
+    .show-menu{
+        display: none;
+    }
+    .show-menu div div ul li a{
+        color: black;
+    }
+
+ }
+@media screen and (max-width: 991px) {
+    .show-menu{
+        display: block;
+    }
+    .footer-head{
+        display: flex;
+    }
+}
+

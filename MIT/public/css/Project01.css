@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    background-color: aquamarine;
+    padding: 10px 200px;
+    height: 100vh;
+}
+
+
+/*  start navbar---------------- */
+.header{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+
+}
+.cl{
+    height: auto;
+}
+.navbar{
+    /* background-color: blueviolet; */
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.navbar .ul_1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5vh;
+}
+.navbar .ul_1 li{
+    list-style-type: none;
+}
+.navbar .ul_1 .li_1 a button{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.navbar .ul_1 .li_1 a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+.dropdown{
+    background: none;
+    border: none;
+    color: rgb(0, 0, 0);
+}
+.dropdown-menu ul li{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-bar-menu{
+    display: none;
+}
+/*  end navbar---------------- */
+
+/* ---------------resposive-----------------*/
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .container{
+        background-color: red;
+    }
+    .navbar{
+        background: none;
+        position: relative;
+
+    }
+    .navbar ul li{
+        display: none;
+    }
+    .nav-bar-menu{
+        font-size: 1.5rem;
+        display: block;
+        padding: 0 10px;
+
+    }
+    .header{
+        background-color: aquamarine;
+    }
+    .brand-logo img{
+        width: 100px;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .container{
+        background-color: red;
+    }
+    .navbar{
+        background: none;
+        position: relative;
+    }
+    .navbar ul li{
+        display: none;
+    }
+    .navbar .ul_1{
+        flex-direction: column;
+        position: relative;
+    }
+    .nav-bar-menu{
+        font-size: 1.5rem;
+        display: block;
+        padding: 0 10px;
+    }
+    .header{
+        background-color: aquamarine;
+    }
+    .brand-logo img{
+        width: 100px;
+    }
+
+
+}

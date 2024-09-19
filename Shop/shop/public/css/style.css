@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+.navmenu  li{
+    list-style-type: none;
+}
+.siderbar-menu li{
+    list-style-type: none;
+}
+.siderbar-menu li a{
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1rem;
+    font-family: sans-serif;
+}
+.navmenu a{
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1rem;
+    font-family: sans-serif;
+}
+.title h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+.menu-icon {
+    cursor: pointer;
+}
+/* Home */
+.title-home {
+    color: black;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 3.5rem;
+}
+.paragrab-content {
+    color: rgb(97, 93, 93);
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+/* about-header */
+#about {
+    background-color: #000000;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+
+.about-header {
+    font-family: "SUSE", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    cursor: pointer;
+  }
+.about-header h2 {
+   font-weight: bold;
+   font-size: 2rem;
+   font-family: sans-serif;
+}
+.about-content{
+    font-family: "SUSE", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+@media screen and (max-width: 991px) {
+    .navmenu {
+        display: none;
+    }
+
+    #sh-menu {
+        display: block;
+        cursor: pointer;
+        font-size: 1.2rem;
+
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .navmenu {
+        display: block;
+    }
+
+    #sh-menu {
+        display: none;
+
+    }
+}
+.bg-service {
+    background: rgb(217,213,222);
+    background: linear-gradient(90deg, rgba(217,213,222,1) 0%, rgba(53,134,255,1) 100%);
+}
