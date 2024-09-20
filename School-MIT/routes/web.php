@@ -52,6 +52,27 @@ Route::middleware("auth")->group(function() {
     Route::get('/education' , function (){
         return view("product.education.index");
     });
+    Route::get('/research' , function (){
+        return view('product.research.index');
+    });
+    Route::get('/innovation' , function (){
+        return view('product.innovation.index');
+    });
+    Route::get('/admissions_aid' , function (){
+        return view('product.admissinos_aid.index');
+    });
+    Route::get('/campus_life' , function (){
+        return view('product.champus_life.index');
+    });
+    Route::get('/news' , function (){
+        return view('product.news.index');
+    });
+    Route::get('/alumni' , function (){
+        return view('product.alumni.index');
+    });
+    Route::get('/about_mit' , function (){
+        return view('product.about_mit.index');
+    });
     Route::get('/index', function () {
         return view('index.index');
     })->name('index');

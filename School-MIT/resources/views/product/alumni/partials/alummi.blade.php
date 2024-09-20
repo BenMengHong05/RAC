@@ -2,7 +2,7 @@
     <div class="container-xxl flex-grow-1 container-p-y">
         <div class="card">
             <div class="car-header d-flex align-items-center justify-content-between" style="min-height: 7vh">
-                <h5 class="m-0 p-0 ps-2">Table education</h5>
+                <h5 class="m-0 p-0 ps-2">Table alummi</h5>
                 <a href="#" class="mx-2 ">
                     <input type="button" value="Add" class="btn btn-success" style="border-radius: 0;">
                 </a>

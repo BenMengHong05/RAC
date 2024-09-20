@@ -1,3 +1,3 @@
 @include('index.partials.header')
-@include('product.education.partials.education')
+@include('product.about_mit.partials.about_mit')
 @include('index.partials.footer')

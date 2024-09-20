@@ -2,7 +2,7 @@
     <div class="container-xxl flex-grow-1 container-p-y">
         <div class="card">
             <div class="car-header d-flex align-items-center justify-content-between" style="min-height: 7vh">
-                <h5 class="m-0 p-0 ps-2">Table champus life</h5>
+                <h5 class="m-0 p-0 ps-2">Table Champus Life</h5>
                 <a href="#" class="mx-2 ">
                     <input type="button" value="Add" class="btn btn-success" style="border-radius: 0;">
                 </a>
@@ -12,10 +12,9 @@
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>Name</th>
-                            <th>Img</th>
-                            <th>Email</th>
-                            <th>Phone</th>
+                            <th>Title</th>
+                            <th>Description</th>
+                            <th>Image</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -24,13 +23,10 @@
                             <td>
                                 1
                             </td>
-                            <td>MengHong</td>
-                            <th>Img</th>
+                            <td>title 1</td>
+                            <th>description 1</th>
                             <td>
-                                MengHong@gmail.com
-                            </td>
-                            <td>
-                                0965768934
+                                <input type="file" name="image" id="image">
                             </td>
                             <td>
                                 <div class="dropdown">

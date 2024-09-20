@@ -58,7 +58,7 @@
         </li>
         <li class="menu-item">
             <a href="/content" class="menu-link menu-toggle">
-                <i class=' menu-icon tf-icons bx bxs-category'></i>
+                <i class='menu-icon tf-icons bx bx-list-check'></i>
                 <div data-i18n="Layouts">Product</div>
             </a>
             <ul class="menu-sub">
@@ -164,7 +164,6 @@
                 </li>
             </ul>
         </li>
-
         <li class="menu-item">
             <a href="{{ route('logout') }}" class=" menu-link"
                 onclick="event.preventDefault(); document.getElementById('logout-form').submit();" target="_blank">

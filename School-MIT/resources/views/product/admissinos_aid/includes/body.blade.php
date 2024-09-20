@@ -4,7 +4,7 @@
             @include('layout.partials.siderbar')
         </div>
         <div class="col-lg-10">
-            @include('product.education.includes.page')
+            @include('product.admissinos_aid.includes.page')
         </div>
     </div>
 </div>

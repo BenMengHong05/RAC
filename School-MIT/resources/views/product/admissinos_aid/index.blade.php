@@ -1,5 +1,5 @@
 @extends('layout.master')
 @section('content')
-    @include('product.education.includes.body')
+    @include('product.admissinos_aid.includes.body')
 @endsection
 
