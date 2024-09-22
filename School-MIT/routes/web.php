@@ -25,9 +25,6 @@ Route::post("/register", [AuthController::class,"registerPost"])
 Route::Post("logout", [AuthController::class,"logout"])->name("logout");
 // Group of routes requiring authentication
 Route::middleware("auth")->group(function() {
-    Route::get('/postr', function () {
-        return view('khmer.index');
-    });
     Route::get('/categories', function () {
         return view('content.categories.index');
     });
