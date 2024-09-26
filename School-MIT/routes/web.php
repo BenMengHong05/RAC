@@ -28,6 +28,9 @@ Route::middleware("auth")->group(function() {
     Route::get('/categories', function () {
         return view('content.categories.index');
     });
+    Route::get('/post', function () {
+        return view('content.post.index');
+    });
     Route::get('/editpc', function () { //p= post and c = categories
         return view('content.edit.index');
     });

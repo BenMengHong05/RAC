@@ -2,7 +2,10 @@
     <div class="container-xxl flex-grow-1 container-p-y">
         <div class="card">
             <div class="car-header d-flex align-items-center justify-content-between" style="min-height: 7vh">
-                <h5 class="m-0 p-0 ps-2">Table Admin</h5>
+                <h5 class="m-0 p-0 ps-2" style="font-family: sans-serif;">Admin</h5>
+                <form action="#" method="POST" style="width: 90%" class="float-end">
+                    <input type="search" class="form-control float-end" name="search" id="search" placeholder="Search..." style="width: 30%">
+                </form>
                 <a href="#" class="mx-2 ">
                     <input type="button" value="Add" class="btn btn-success" style="border-radius: 0;">
                 </a>

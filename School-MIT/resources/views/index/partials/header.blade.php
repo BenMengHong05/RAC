@@ -1,5 +1,4 @@
-<nav class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
-    id="layout-navbar">
+<nav class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"id="layout-navbar">
     <div class="layout-menu-toggle navbar-nav align-items-xxl-center me-3 me-xxl-0 d-xxl-none">
         <a class="nav-item nav-link px-0 me-xxl-4 " href="javascript:void(0);">
             <i class="bx bx-menu bx-sm"></i>
@@ -19,7 +18,7 @@
         <ul class="navbar-nav flex-row align-items-center ms-auto">
             <!-- Place this tag where you want the button to render. -->
             <li class="nav-item lh-1 me-3">
-                <a class="github-button" href="https://github.com/themeselection/sneat-html-admin-template-free"
+                <a class="github-button"
                     data-icon="octicon-star" data-size="large" data-show-count="true"
                     aria-label="Star themeselection/sneat-html-admin-template-free on GitHub">Star</a>
             </li>
@@ -66,11 +65,16 @@
                     <li>
                         <div class="dropdown-divider"></div>
                     </li>
-                    <li>
-                        <a class="dropdown-item" href="/login">
-                            <i class="bx bx-power-off me-2"></i>
-                            <span class="align-middle">Log Out</span>
+                    <li >
+                        <a href="{{ route('logout') }}" class=" dropdown-item d-flex align-items-center"
+                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();" target="_blank">
+                            <i class=' bx bx-power-off me-2 m-0 p-0'></i>
+                            <div data-i18n="Support" class="align-middle text-dark">Log Out</div>
                         </a>
+                        <!-- Hidden form to handle the POST request -->
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
                     </li>
                 </ul>
             </li>

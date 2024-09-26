@@ -2,9 +2,13 @@
     <div class="container-xxl flex-grow-1 container-p-y">
         <div class="card">
             <div class="car-header d-flex align-items-center justify-content-between" style="min-height: 7vh">
-                <h5 class="m-0 p-0 ps-2">Staff</h5>
-                <button type="submit" class="btn btn-success ps-4 px-4 mx-2"><a href="/add"
-                        class="text-white">Staff</a></button>
+                <h5 class="m-0 p-0 ps-2" style="font-family: sans-serif;">Staff</h5>
+                <form action="#" method="POST" style="width: 90%" class="float-end">
+                    <input type="search" class="form-control float-end" name="search" id="search" placeholder="Search..." style="width: 30%">
+                </form>
+                <button type="submit" class="btn btn-success ps-4 px-4 mx-2">
+                    <a href="/add"class="text-white">Staff</a>
+                </button>
             </div>
             <div class="table-responsive text-nowrap">
                 <table class="table">
