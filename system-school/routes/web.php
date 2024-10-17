@@ -23,6 +23,8 @@ use Illuminate\Support\Facades\Route;
     Route::get("/student_delete/{id}/edit" , [StudentController::class, "edit"])->name("student_edit");
     Route::put("/student_update/{id}", [StudentController::class , "update"])->name("student_update");
     Route::get('/students/search', [StudentController::class, 'search'])->name('student_search');
+    Route::get('/students/{id}', [StudentController::class, 'show'])->name('student_view');
+
 
 
 

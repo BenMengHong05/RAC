@@ -73,5 +73,13 @@ class StudentController extends Controller
         $students = $query->get();
 
         return view('index', compact('students'));
-    }
+        }
+       public function show($id)
+        {
+            // Find the student by id
+            $student = Student::findOrFail($id);
+
+            // Pass the student data to the view
+            return view('student_view', compact('student'));
+        }
 }

@@ -59,15 +59,12 @@
                         <td>{{$student->dob}}</td>
                         <td>{{$student->phone}}</td>
                         <td class="d-flex gap-2">
+                            <a href="{{ route('student_view', $student->id) }}" class="btn btn-info">View</a>
                             <form action="{{ route('student_delete', $student->id) }}" method="POST" id="delete-form-{{ $student->id }}">
                                 @csrf
                                 @method("DELETE")
                                 <button type="button" class="btn btn-danger" onclick="confirmDelete({{ $student->id }})">Delete</button>
                             </form>
-                            <a href="{{route('student_create')}}">
-                                <button type="button" class="btn btn-success">add</button>
-                            </a>
-
                             <a href="{{ route('student_edit', $student->id) }}">
                                 <button type="button" class="btn btn-warning">Edit</button>
                             </a>

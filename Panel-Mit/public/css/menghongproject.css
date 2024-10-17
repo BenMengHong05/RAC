@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: aqua;
+}
+nav div ul li a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+nav{
+    width: 100%;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+}
+nav div ul{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: brown;
+}
+nav div ul li{
+    width: 100%;
+    height: 10vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+nav div ul li a{
+    width: 100%;
+    height: 10vh;
+    font-size: 17px;
+    font-family: Khmer OS Moul;
+    font-weight: -10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(88, 91, 91);
+    color: white;
+    gap: 2vh;
+    position: relative;
+    text-decoration: none;
+}
+nav div ul li a:hover{
+    background-color: rgb(109, 109, 109);
+}
+
+nav div ul li{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+}
+nav div ul li ul li {
+    left: 10px;
+}
+nav div ul li .show-ul{
+    width: 30vh;
+    height: auto;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(97, 95, 95);
+    position: absolute;
+    font-family: Khmer OS Moul;
+    font-size: 15px;
+}
+nav div ul li ul{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+}
+
+nav div ul .hover-li:hover .show-ul{
+    opacity: 1;
+    top: 10vh;
+    color: white;
+}
+nav div ul li .show-ul:hover{
+    visibility: hidden;
+}
+
+

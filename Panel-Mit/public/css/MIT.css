@@ -1,0 +1,454 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    font: sans-serif;
+    font-weight: bold;
+    list-style-type: none;
+}
+div button span{
+    display: none;
+}
+nav{
+    position: fixed;
+    z-index: 999;
+    background-color: rgb(118, 0, 0);
+}
+div a{
+    text-decoration: none;
+    color: white;
+}
+nav div div .ul-hover{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ul-hover li{
+    list-style-type: none;
+}
+.ul-hover li a{
+    color: white;
+}
+.ul-hover li a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+}
+.button-show{
+    border: none;
+    background: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.offcanvas-body li{
+    position: relative;
+    transition: .3s;
+}
+.offcanvas-body li a{
+    font-family: sans-serif;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+.offcanvas-body li:hover{
+    background-color: rgb(255, 0, 0);
+    cursor: pointer;
+}
+.offcanvas-body li:hover a{
+   color: white;
+}
+
+.tamplate .txt .updates{
+    font-size: 1.2rem;
+    border-bottom: 1px solid red;
+
+}
+.off li{
+    list-style-type: none;
+}
+.showw {
+    z-index: 999;
+    opacity: 1;
+}
+.tamplate{
+    display: flex;
+    align-items: flex-end;
+    justify-self: center;
+}
+.button-show i{
+    margin: 10px 20px;
+    font-size: 2rem;
+}
+div .menubar{
+    display: none;
+}
+div .menubar button{
+    border: none;
+    background: none;
+}
+@media screen and (max-width:1250px) {
+    .ul-hover .ul-1{
+        display: none;
+    }
+}
+@media screen and (max-width:1000px) {
+    .ul-hover .ul-2{
+        display: none;
+    }
+}
+@media screen and (max-width:900px) {
+    .ul-hover .ul-3{
+        display: none;
+    }
+}
+@media screen and (max-width:800px) {
+    .ul-hover li{
+        display: none;
+    }
+    div .search-icon{
+        display: none;
+    }
+}
+@media screen and (max-width:799px) {
+
+   div .menubar{
+        display: block;
+   }
+}
+@media screen and (max-width:1150px) {
+
+    .img-fluid-1{
+    font-size: 0.8rem;
+   }
+}
+.ul-hover li a{
+    position: relative;
+
+}
+.ul-hover li a::after{
+    content: "";
+    position: absolute;
+    background-color: rgb(255, 0, 0);
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+.ul-hover li a:hover:after{
+    width: 100%;
+}
+
+
+/*============================================================================ bodey==========================================================================*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.sider-footer{
+    height: 20vh;
+}
+.sider-search i{
+    margin-top: 3vh;
+    margin-left: 1vh;
+    position: absolute;
+}
+.sider-footer ul{
+    width: 100%;
+    height: 3vh;
+    position: relative;
+    display: flex;
+}
+.sider-footer .massa:hover{
+    text-decoration: underline;
+}
+.sider-menu div ul li{
+    list-style-type: none;
+}
+.sider-menu div ul li a{
+    color: black;
+}
+.sider-menu div ul li:hover{
+    text-decoration: underline;
+}
+.sider-footer .menu{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.scrol-text .tamplate-text a{
+    font-family: sans-serif;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.sider-footer ul li{
+   list-style-type: none;
+}
+.sider-footer ul li a{
+    font-size: 15px;
+    text-decoration: underline;
+}
+.sider-footer ul li a:hover{
+    color: red;
+}
+.sider-footer ul li a{
+    border-bottom: 1px solid red;
+}
+.menu{
+    width: 100%;
+    height: 20vh;
+}
+.menu ul li a{
+   color: black;
+}
+.scrol-down {
+    width: 100%;
+}
+.scrol-down{
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.tamplate{
+    height: 22.5vh;
+}
+.tamplate-text{
+    width: 100%;
+}
+.josth-us{
+    width: 15vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid red;
+}
+.josth-us i{
+    margin-left: 11.5vh;
+    margin-bottom: 4vh;
+    position: absolute;
+}
+.tamplate .tamplate-text a{
+    color: rgb(59, 56, 56);
+}
+.josth-us{
+    padding: 1vh;
+    position: relative;
+}
+.josth-us:hover{
+    background-color: red;
+    cursor: pointer;
+}
+@media screen and (max-width:990px) {
+    .sider-box{
+        height: 45vh;
+    }
+    .sider-menu,.menu-b,.josth-us,.sider-footer{
+        display: none;
+    }
+
+}
+@media screen and (max-width:990px) {
+    .sider-box .sider-search h5{
+        text-align: center;
+    }
+}
+/*--------------------------------------- content--------------------------------------------*/
+
+.scrol-ul li{
+    list-style-type: none;
+}
+.scrol-ul li a{
+    position: relative;
+    text-decoration: underline;
+    color: red;
+}
+.scrol-ul li a:hover{
+    color: rgb(141, 6, 6);
+}
+.img-text-hover:hover{
+    cursor: pointer;
+    text-decoration: underline;
+
+}
+.subscribe-hover:hover{
+    background-color: red;
+    cursor: pointer;
+}
+.scrol-footer{
+    height: 20vh;
+    background-color: rgb(80, 0, 0);
+    color: white;
+}
+.span-about:hover{
+    color: red;
+    cursor: pointer;
+}
+
+/*============================================================================================ footer ===============================================================*/
+.show-footer div div ul li a{
+    color: black;
+}
+.show-footer div div ul li a{
+    color: black;
+}
+.footer-menu-mit .row div p{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.footer-menu-mit .row div ul li a{
+   border-bottom: 1px solid red;
+}
+.footer-menu-mit .row div ul li a:hover{
+   color: red;
+}
+.paragrab:hover{
+    cursor: pointer;
+    text-decoration: underline;
+
+}
+.footer-box007:hover{
+    background-color: red;
+    color:white;
+    cursor:pointer;
+}
+.footer-box-content:hover{
+    background-color: red;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+
+@media screen and (max-width:2500px){
+    .home-footer{
+        display: none;
+    }
+}
+@media screen and (max-width:991px){
+    .home-footer{
+        display: block;
+    }
+    .footer-logo{
+        display: none;
+    }
+}
+@media screen and (max-width:360px){
+    .screen-360{
+        font-size: .9rem;
+    }
+}
+/*-----------------------------------------------Enducation ----------------------------------------------*/
+.education-footer{
+    background-color: rgb(232, 227, 237);
+}
+.footer-menu div div p:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+.education-footer li a{
+    border-bottom: 1px solid red;
+    color: black;
+}
+.education-footer li a:hover{
+    color: red;
+}
+
+.ul-enducation-footer ul li a{
+    list-style-type: none;
+    color: black;
+}
+li{
+    list-style-type: none;
+}
+.education-imgae  div div div div img{
+    cursor: crosshair;
+    position: relative;
+}
+.Education-sidebar{
+    width: 100%;
+    height: 100%;
+}
+
+.education-ul li a{
+    color: black;
+    border-bottom: 1px solid red;
+}
+.education-ul li  span{
+    color: rgb(255, 0, 0);
+}
+.education-ul li a:hover{
+    color: rgb(255, 0, 0);
+}
+.education-shcool{
+    width: 20vh;
+    border: 1px solid red;
+}
+.education-shcool:hover{
+    cursor: pointer;
+    background-color: red;
+    color: white;
+}
+/*-------------------------------------------------news -------------------------------------------------*/
+.news-4{
+    font-family: sans-serif;
+    font-weight: bold;
+}
+.news-p{
+    font-weight: 300;
+}
+.carousel-control-prev span{
+    color: black;
+}
+.news-hover-h4:hover{
+   cursor: pointer;
+   text-decoration: underline red;
+   font-family: sans-serif;
+   font-weight: bold;
+}
+.news-hover-h4{
+   cursor: pointer;
+   font-family: sans-serif;
+   font-weight: bold;
+}
+.content-news-1 p{
+    font-size: 1.2rem;
+}
+.input-hover:hover{
+    background-color: red;
+}
+.new-ul li a{
+    border-bottom: 1px solid red;
+    font-size: 1.2rem;
+    color: black;
+}
+.new-ul li{
+    font-size: 1.2rem;
+    color: black;
+}
+
+.new-ul li a:hover{
+    background-color: red;
+}
+.ul-hover-4{
+    border-bottom: 3px solid red;
+    cursor:pointer;
+}
+.ul-hover-4:hover{
+    color: red;
+}
+/*---------------------------------------------------------------- educartion  --------------------------------------*/
+
+.img:hover {
+    transition: 0.8s ease-in-out ;
+    transform: scale(1.04);
+    cursor: crosshair;
+}
