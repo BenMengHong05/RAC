@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.sider-footer{
+    height: 20vh;
+}
+.sider-search i{
+    margin-top: 3vh;
+    margin-left: 1vh;
+    position: absolute;
+}
+.sider-footer ul{
+    width: 100%;
+    height: 3vh;
+    position: relative;
+    display: flex;
+}
+.sider-footer .massa:hover{
+    text-decoration: underline;
+}
+.sider-menu div ul li{
+    list-style-type: none;
+}
+.sider-menu div ul li a{
+    color: black;
+}
+.sider-menu div ul li:hover{
+    text-decoration: underline;
+}
+.sider-footer .menu{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.scrol-text .tamplate-text a{
+    font-family: sans-serif;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.sider-footer ul li{
+   list-style-type: none;
+}
+.sider-footer ul li a{
+    font-size: 15px;
+    text-decoration: underline;
+}
+.sider-footer ul li a:hover{
+    color: red;
+}
+.menu{
+    width: 100%;
+    height: 20vh;
+}
+.menu ul li a{
+   color: black;
+}
+.scrol-down {
+    width: 100%;
+}
+.scrol-down{
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.tamplate{
+    height: 22.5vh;
+}
+.tamplate-text{
+    width: 100%;
+}
+.josth-us{
+    width: 15vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid red;
+}
+.josth-us i{
+    margin-left: 11.5vh;
+    margin-bottom: 4vh;
+    position: absolute;
+}
+.tamplate .tamplate-text a{
+    color: rgb(59, 56, 56);
+}
+.josth-us{
+    padding: 1vh;
+    position: relative;
+}
+.josth-us:hover{
+    background-color: red;
+    cursor: pointer;
+}
+@media screen and (max-width:990px) {
+    .sider-box{
+        height: 45vh;
+    }
+    .sider-menu,.menu-b,.josth-us,.sider-footer{
+        display: none;
+    }
+
+}
+@media screen and (max-width:990px) {
+    .sider-box .sider-search h5{
+        text-align: center;
+    }
+}
+/*--------------------------------------- content--------------------------------------------*/
+
+.scrol-ul li{
+    list-style-type: none;
+}
+.scrol-ul li a{
+    position: relative;
+    text-decoration: underline;
+    color: black;
+}
+.scrol-ul li a:hover{
+    color: red;
+}
+.img-text-hover:hover{
+    cursor: pointer;
+    text-decoration: underline;
+
+}
+.subscribe-hover:hover{
+    background-color: red;
+    cursor: pointer;
+}
+.scrol-footer{
+    height: 20vh;
+    background-color: rgb(80, 0, 0);
+    color: white;
+}
+.span-about:hover{
+    color: red;
+    cursor: pointer;
+}
