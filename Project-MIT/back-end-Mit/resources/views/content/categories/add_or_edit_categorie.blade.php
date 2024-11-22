@@ -11,8 +11,8 @@
                     <div class="container-xxl flex-grow-1 container-p-y">
                         <div class="row g-4 mb-5">
                             <div class="col-lg-12">
+                                <h3>{{ isset($categorieEdit->id) ? 'Update categorie ' : 'Add categorie ' }}</h3>
                                 <div class="card h-100 p-4">
-                                    <h3>{{ isset($categorieEdit->id) ? 'Update categorie MIT ' : 'Add categorie MIT' }}</h3>
                                     <p class="card-text">
                                     <form
                                         action="{{ isset($categorieEdit) && $categorieEdit->id ? route('categorie_update', $categorieEdit->id) : route('categorie_store') }}"
@@ -30,16 +30,16 @@
                                                 </ul>
                                             </div>
                                         @endif
-
                                         <div class="mb-3">
                                             <label for="name" class="form-label">name</label>
                                             <input type="text" class="form-control"
                                                 value="{{ isset($categorieEdit) && $categorieEdit->id ? old('name', $categorieEdit->name) : '' }}"
                                                 id="name" name="name" required>
                                         </div>
-                                        <button type="submit" class="btn btn-primary float-end">
+                                        <button type="submit" class="btn btn-primary mx-2 float-end">
                                             {{ isset($categorieEdit->id) ? 'Update' : 'Submit' }}
                                         </button>
+                                        <a href="{{route('categories')}}" class="btn btn-primary  float-end">Back to list</a>
                                     </form>
                                     </p>
                                 </div>

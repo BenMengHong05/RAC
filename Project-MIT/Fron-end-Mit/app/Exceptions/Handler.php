@@ -3,6 +3,7 @@
 namespace App\Exceptions;
 
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Nette\Schema\Expect;
 use Throwable;
 
 class Handler extends ExceptionHandler
@@ -44,5 +45,18 @@ class Handler extends ExceptionHandler
         $this->reportable(function (Throwable $e) {
             //
         });
+    }
+    /**
+     * Render an exception into an HTTP response.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \Throwable  $exception
+     */
+    public function render($request, Throwable $exception){
+        if($this->isHttpException($exception)){
+            return response()->view('page.index_error');
+        }else{
+            return response()->view('page.index_error');
+        }
     }
 }

@@ -44,6 +44,7 @@
                 <th>Name</th>
                 <th>dob</th>
                 <th>Phone</th>
+                <th>City</th>
                 <th class="">Action</th>
             </thead>
             <tbody>
@@ -58,6 +59,7 @@
                         <td>{{$student->name}}</td>
                         <td>{{$student->dob}}</td>
                         <td>{{$student->phone}}</td>
+                        
                         <td class="d-flex gap-2">
                             <a href="{{ route('student_view', $student->id) }}" class="btn btn-info">View</a>
                             <form action="{{ route('student_delete', $student->id) }}" method="POST" id="delete-form-{{ $student->id }}">

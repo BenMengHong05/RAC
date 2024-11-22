@@ -5,7 +5,7 @@
           <div class="d-flex align-items-end row">
             <div class="col-sm-7">
               <div class="card-body">
-                <h5 class="card-title text-primary"> Welcome in Admint Panel MIT</h5>
+                <h5 class="card-title text-primary"> Welcome in School Panel Mit</h5>
                 <p class="mb-4">
                   You have done <span class="fw-medium">72%</span> more sales today. Check your new badge in
                   your profile.
@@ -31,7 +31,7 @@
     <div class="col-lg-4 order-2 order-md-3 order-lg-2 mb-4">
         <div class="card   h-100">
             <div class="total-student p-4 d-flex flex-column align-items-center justify-content-center ">
-                <h4 class="card-title m-0 p-0  text-primary " >Total Students</h4>
+                <h4 class="card-title m-0 p-0  text-primary " >{{__('messages.Students')}}</h4>
                 <h2 class="card-subtitle m-0 p-0  text-secondary fs-3 mt-4">{{$students}}</h2>
             </div>
         </div>
@@ -39,7 +39,7 @@
       <div class="col-lg-4 order-2 order-md-3 order-lg-2 mb-4">
         <div class="card  h-100">
             <div class="total-student p-4 d-flex flex-column align-items-center justify-content-center ">
-                <h4 class="card-title m-0 p-0   text-primary">Total Staff</h4>
+                <h4 class="card-title m-0 p-0   text-primary">{{__('messages.Staffs')}}</h4>
                 <h2 class="card-subtitle m-0 p-0  text-secondary fs-3 mt-4">{{ $staffs }}</h2>
             </div>
         </div>
@@ -47,7 +47,7 @@
       <div class="col-lg-4 order-2 order-md-3 order-lg-2 mb-4">
         <div class="card   h-100">
             <div class="total-student p-4 d-flex flex-column align-items-center justify-content-center ">
-                <h4 class="card-title m-0 p-0   text-primary">Total Teacher</h4>
+                <h4 class="card-title m-0 p-0   text-primary">{{__('messages.Teachers')}}</h4>
                 <h2 class="card-subtitle m-0 p-0  text-secondary fs-3 mt-4">{{$teachers}}</h2>
             </div>
         </div>
@@ -55,7 +55,7 @@
   </div>
   <div class="row">
     <div class="col-lg-12 order-2 order-md-3 order-lg-2 ">
-        <div class="card bg-danger h-100">
+        <div class="card h-100">
             <figure class="m-0 p-0 w-100 order-2">
                 <img src="{{asset('images/bannerschool-MIT.jpg')}}" alt="" class="img-fluid" style="width: 100%;height: 40vh;object-fit: cover">
             </figure>

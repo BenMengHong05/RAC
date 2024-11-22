@@ -20,16 +20,15 @@
         </div>
         <div class="container mt-5">
             <div class="row mt-2">
-                <div class="col-lg-6 education-text">
+                <div class="col-xl-6 education-text">
                     <h5>
                         {{$admissions_aids->description}}
 
                     </h5>
                 </div>
-                <div class="col-lg-6 education-img" style="min-height: 40vh">
+                <div class="col-xl-6 education-img" style="min-height: 40vh">
                     <div class="ed-img">
-                        <img src="{{ asset('images/' . $admissions_aids->image) }}" alt="Education Image" style="width: 60vh; height: 40vh;">
-
+                        <img src="{{ asset('images/' . $admissions_aids->image) }}" alt="Education Image" class="img-fluid" style="width: 70vh; height: 50vh;">
                     </div>
                 </div>
             </div>

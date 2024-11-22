@@ -19,14 +19,14 @@
         </div>
         <div class="container mt-5">
             <div class="row mt-2">
-                <div class="col-lg-6 education-text">
+                <div class="col-xl-6 education-text">
                     <h5>
                         {{ $innovations->description }}
                     </h5>
                 </div>
-                <div class="col-lg-6 education-img" style="min-height: 40vh">
+                <div class="col-xl-6 education-img" style="min-height: 40vh">
                     <div class="ed-img">
-                        <img src="{{ asset('images/' . $innovations->image) }}" alt="Education Image" style="width: 60vh; height: 40vh;">
+                        <img src="{{ asset('images/' . $innovations->image) }}" alt="Education Image" style="width: 70vh; height: 50vh;">
                     </div>
                 </div>
             </div>
@@ -76,8 +76,8 @@
                     with the gross domestic product of the <span class="ul-hover-4">10th-largest economy</span> in the world.
                 </h5>
             </div>
-            <div class="col-lg-6 ">
-                <img src="{{ asset('images/iStock-889512900_0.jpg') }}" alt="" width="100%">
+            <div class="col-lg-6">
+                <img src="{{ url('images/iStock-889512900_0.jpg') }}" alt="" class="img-fluid" width="80%">
                 <p>From clean water technology to medical research, MIT innovations have <br>
                     global impact. </p>
             </div>

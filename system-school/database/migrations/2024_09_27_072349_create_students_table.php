@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string("name");
             $table->date("dob");
             $table->integer("phone");
+            $table->bigInteger("studentprofile_id");
             $table->timestamps();
         });
     }

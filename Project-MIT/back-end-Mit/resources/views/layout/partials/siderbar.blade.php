@@ -1,77 +1,87 @@
-<aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme ">
-    <div class="app-brand demo ">
+
+<aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme" style="min-width: 18%">
+    <div class="app-brand demo " style="min-height: 12%;width: 100%">
         <a href="index.html" class="app-brand-link d-flex align-items-center justify-content-center  w-100">
             <span class="app-brand-logo demo ">
-                <img src="{{ asset('image/mit_logo.png') }}" class="img-fluid" alt="" style="height: 7vh">
+                <img src="{{ asset('image/mit_logo.png') }}" class="img-fluid" alt="" style="height: 10vh">
             </span>
-            {{-- <span class="app-brand-text demo menu-text fw-bold ms-2"></span> --}}
-        </a>
-        <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
-            <i class="bx bx-chevron-left bx-sm align-middle"></i>
+            <a href="javascript:void(0);"  class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none" >
+                <i class="bx bx-chevron-left  bx-sm align-middle" ></i>
+            </a>
         </a>
     </div>
     <div class="menu-inner-shadow"></div>
-    <ul class="menu-inner mt-4 py-1">
+    <ul class="menu-inner mt-4 py-1 " style="width: 100%">
         <!-- Dashboards -->
-        <li class="menu-item active open">
+        <li class="menu-item active open w-100">
             <a href="/dashboard" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                <div data-i18n="Account">Dashboards</div>
+                <div data-i18n="Account">{{__('messages.Dashboards')}}</div>
             </a>
         </li>
         <!-- Layouts -->
-        <li class="menu-item">
+        <li class="menu-item w-100">
             <a href="/content" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-layout"></i>
-                <div data-i18n="Layouts">Content</div>
+                <div data-i18n="Layouts">{{__('messages.Contents')}}</div>
             </a>
-            <ul class="menu-sub">
-
+            <ul class="menu-sub ">
                 <li class="menu-item">
-                    <a href="/newmit_categories" class="menu-link ">
-                        <div data-i18n="newmit_categories">Categories</div>
+                    <a href="/categories" class="menu-link">
+                        <i class='menu-icon tf-icons bx bx-category'></i>
+                        <div data-i18n="newmit_categories">{{__('messages.Categories')}}</div>
                     </a>
                 </li>
             </ul>
             <ul class="menu-sub">
                 <li class="menu-item">
                     <a href="/post" class="menu-link menu-toggle">
-                        <div data-i18n="Categories">Post</div>
+                        <i class='menu-icon tf-icons bx bxs-envelope' ></i>
+                        <div data-i18n="Categories">{{__('messages.Posts')}}</div>
                     </a>
                     <ul class="menu-sub">
                         <li class="menu-item">
                             <a href="/newmits" class="menu-link">
-                                <div data-i18n="newmits">NewMIT</div>
+
+                                <div data-i18n="newmits">{{__('messages.News')}}</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="/educations" class="menu-link">
-                                <div data-i18n="Admin">Education</div>
+
+                                <div data-i18n="Admin">{{__('messages.Educations')}}</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="/researchs" class="menu-link">
-                                <div data-i18n="staff">Research</div>
+
+                                <div data-i18n="staff">{{__('messages.Researchs')}}</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="/innovations" class="menu-link">
-                                <div data-i18n="Admin">Innovation</div>
+
+                                <div data-i18n="Admin">{{__('messages.Innovations')}}</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="/admissions_aids" class="menu-link">
-                                <div data-i18n="Admissions_Aid">Admissions_Aid</div>
+                                <div data-i18n="Admissions_Aid">{{__('messages.Admissions_aids')}}</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="/campuslifes" class="menu-link">
-                                <div data-i18n="Campuslife">Campuslife</div>
+                                <div data-i18n="Campuslife">{{__('messages.Campuslifes')}}</div>
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a href="/news" class="menu-link">
-                                <div data-i18n="New">New</div>
+                            <a href="/alumnis" class="menu-link">
+                                <div data-i18n="New">{{__('messages.Alumins')}}</div>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="/aboutmits" class="menu-link">
+                                <div data-i18n="New">{{__('messages.Aboutschool')}}</div>
                             </a>
                         </li>
                     </ul>
@@ -79,66 +89,75 @@
             </ul>
 
         </li>
-        <li class="menu-item">
+        <li class="menu-item w-100">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class=' menu-icon tf-icons bx bx-user'></i>
-                <div data-i18n="Account Settings">User</div>
+                <div data-i18n="Account Settings">{{__('messages.Users')}}</div>
             </a>
             <ul class="menu-sub">
                 <li class="menu-item">
+                    <a href="/users" class="menu-link">
+                        <div data-i18n="Admin">{{__('messages.Users')}}</div>
+                    </a>
+                </li>
+                <li class="menu-item">
                     <a href="/students" class="menu-link">
-                        <div data-i18n="Admin">Student</div>
+                        <div data-i18n="Admin">{{__('messages.Students')}}</div>
                     </a>
                 </li>
                 <li class="menu-item">
                     <a href="/staffs" class="menu-link">
-                        <div data-i18n="staff">Staff</div>
+                        <div data-i18n="staff">{{__('messages.Staffs')}}</div>
                     </a>
                 </li>
                 <li class="menu-item">
                     <a href="/teachers" class="menu-link">
-                        <div data-i18n="Admin">Teacher</div>
+                        <div data-i18n="Admin">{{__('messages.Teachers')}}</div>
                     </a>
                 </li>
             </ul>
         </li>
-        <li class="menu-item">
+        <li class="menu-item w-100">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class=" menu-icon tf-icons fa-solid fa-globe"></i>
-                <div data-i18n="Authentications">Language</div>
+                <div data-i18n="Authentications">Languages</div>
             </a>
             <ul class="menu-sub">
                 <li class="menu-item">
-                    <a href="/Khmer" class="menu-link" target="_blank">
-                        <div data-i18n="Basic">Khmer</div>
+                    <a href="{{ route('lang.switch',['lang'=>'kh']) }}" class="menu-link">
+                        Khmer
                     </a>
-
                 </li>
                 <li class="menu-item">
-                    <a href="/English" class="menu-link" target="_blank">
-                        <div data-i18n="Basic">English</div>
+                    <a href="{{ route('lang.switch', ['lang'=>'en']) }}" class="menu-link">
+                        English
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="{{ route('lang.switch', ['lang'=>'zh']) }}" class="menu-link">
+                        Chinese
                     </a>
                 </li>
             </ul>
         </li>
-        <li class="menu-item">
+        <li class="menu-item w-100">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class='menu-icon tf-icons bx bxs-package'></i>
-                <div data-i18n="Misc">Pages</div>
+                <div data-i18n="Misc">{{__('messages.Pages')}}</div>
             </a>
             <ul class="menu-sub">
                 <li class="menu-item">
-                    <a href="pages-misc-error.html" class="menu-link">
-                        <div data-i18n="Error">Error</div>
+                    <a href="/erro" class="menu-link">
+                        <div data-i18n="Error">{{__('messages.Error')}}</div>
                     </a>
                 </li>
             </ul>
         </li>
-        <li class="menu-item">
-            <a href="{{ route('logout') }}" class=" menu-link"
+        <li class="menu-item w-100 ">
+            <a href="{{ route('logout') }}" class=" menu-link text-danger"
                 onclick="event.preventDefault(); document.getElementById('logout-form').submit();" target="_blank">
                 <i class=' menu-icon tf-icons bx bx-log-out'></i>
-                <div data-i18n="Support">Log Out</div>
+                <div data-i18n="Support" >{{__('messages.Logout')}}</div>
             </a>
             <!-- Hidden form to handle the POST request -->
             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

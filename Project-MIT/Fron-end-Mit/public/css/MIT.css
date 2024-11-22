@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Moul&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -21,6 +23,24 @@ div a{
     text-decoration: none;
     color: white;
 }
+.category-descrition{
+    font-family: "Poppins", serif;
+}
+.new-description{
+    font-family: "Roboto", serif;
+}
+.title-categories{
+    font-family: "Lexend", sans-serif;
+    font-weight: bold;
+}
+.search-input{
+    width: 90%;
+    height: 10vh;
+    font-size: 1.4rem;
+}
+.search-icon{
+    font-size: 1.4rem;
+}
 nav div div .ul-hover{
     display: flex;
     align-items: center;
@@ -39,6 +59,14 @@ nav div div .ul-hover{
     font-family: sans-serif;
     font-weight: bold;
     text-decoration: none;
+}
+.title-categories{
+
+}
+.description-categories{
+
+    font-size: 1rem;
+
 }
 .button-show{
     border: none;
@@ -96,18 +124,21 @@ div .menubar button{
     .ul-hover .ul-1{
         display: none;
     }
+    div .menubar{
+        display: block;
+   }
 }
-@media screen and (max-width:1000px) {
+@media screen and (max-width:1100px) {
     .ul-hover .ul-2{
         display: none;
     }
 }
-@media screen and (max-width:900px) {
+@media screen and (max-width:990px) {
     .ul-hover .ul-3{
         display: none;
     }
 }
-@media screen and (max-width:800px) {
+@media screen and (max-width:850px) {
     .ul-hover li{
         display: none;
     }
@@ -116,13 +147,11 @@ div .menubar button{
     }
 }
 @media screen and (max-width:799px) {
-
    div .menubar{
         display: block;
    }
 }
 @media screen and (max-width:1150px) {
-
     .img-fluid-1{
     font-size: 0.8rem;
    }
@@ -143,6 +172,25 @@ div .menubar button{
 }
 .ul-hover li a:hover:after{
     width: 100%;
+}
+.title-carousel{
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.description-carousel{
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+}
+.footer-carousel{
+    border-bottom: 1px solid red;
+}
+.footer-carousel:hover{
+    background-color: rgba(255, 0, 0, 0.543);
+}
+.link-carousel a{
+    font-family: "Poppins", sans-serif;
+    font-size: 1.1rem;
 }
 
 
@@ -247,19 +295,50 @@ div .menubar button{
 .josth-us:hover{
     background-color: red;
     cursor: pointer;
+    color: white;
 }
-@media screen and (max-width:990px) {
+@media screen and (max-width:2000px) {
     .sider-box{
-        height: 45vh;
+        text-align: start;
+        height: 0vh;
+        position: sticky;
+        position: -webkit-sticky;
+        top:10px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        background-color: rgb(255, 255, 255,0.1)
     }
-    .sider-menu,.menu-b,.josth-us,.sider-footer{
+    .sider-menu{
+        display: block;
+    }
+    /* .sider-menu, .menu-b,.josth-us,.sider-footer{
         display: none;
     }
+    .twitter{
+        display: none;
+    } */
+
 
 }
-@media screen and (max-width:990px) {
-    .sider-box .sider-search h5{
-        text-align: center;
+
+@media screen and (max-width:991px) {
+    .sider-box{
+        padding-left: 2rem;
+        min-height: 50vh;
+    }
+    .siderbar-search{
+        padding-left: 2rem;
+    }
+     .sider-menu{
+        display: none;
+        height: auto;
+    }
+    .sider-menu, .menu-b,.josth-us,.sider-footer{
+        display: none;
+        height: auto;
+    }
+    .twitter{
+        display: none;
+        height: auto;
     }
 }
 /*--------------------------------------- content--------------------------------------------*/
@@ -414,7 +493,7 @@ li{
    font-family: sans-serif;
    font-weight: bold;
 }
-.news-hover-h4{
+  .news-hover-h4{
    cursor: pointer;
    font-family: sans-serif;
    font-weight: bold;
@@ -447,8 +526,16 @@ li{
 }
 /*---------------------------------------------------------------- educartion  --------------------------------------*/
 
+.img {
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
 .img:hover {
-    transition: 0.8s ease-in-out ;
-    transform: scale(1.04);
+    transform: scale(1.03);
+    opacity: 0.5;
     cursor: crosshair;
+}
+.trel{
+    width: 1.1vh;
+    background-color: red;
+    height: 1px;
 }

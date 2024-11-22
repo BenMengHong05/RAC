@@ -8,16 +8,29 @@
             <div class="col-xl-10">
                 @include('index.partials.header')
 
-                <div class="container mt-5">
-                    <h1>Research Details</h1>
+                <div class="container mt-4">
+                    <h2>Research Detail</h2>
                     <div class="card mt-4">
                         <div class="card-body">
-                            <h5 class="card-text" style="min-height: 5vh">Image:<img src="{{ asset('images/' . $research->image) }}" alt="" class="img-fluid" style="width: 10vh;height: 10vh"></h5>
-                            <h5 class="card-text" style="min-height: 5vh">title:{{$research->title}}</h5>
-                            <h5 class="card-text" style="min-height: 5vh">description:{{$research->description}}</h5>
+                            <table class="d-flex gap-2" >
+                                <thead>
+                                    <tr class="d-flex flex-column">
+                                        <td><h5 class="card-text" style="min-height: 10vh">Title:</h5></td>
+                                        <td><h5 class="card-text" style="min-height: 10vh">Description:</h5></td>
+                                        <td><h5 class="card-text" style="min-height: 10vh">Image:</h5></td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="d-flex flex-column">
+                                        <td><h5 class="card-text" style="min-height: 10vh">{{$research->title}}</h5></td>
+                                        <td><h5 class="card-text" style="min-height: 10vh">{{$research->description}}</h5></td>
+                                        <td><img src="{{ asset('images/' . $research->image) }}" alt="" class="img-fluid" style="width: 10vh;height: 10vh"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
-                    <a href="{{ route('researchs') }}" class="btn btn-primary mt-3">Back to List</a>
+                    <a href="{{ route('researchs') }}" class="btn btn-primary mt-3 mb-3">Back to List</a>
                 </div>
 
                 @include('index.partials.footer')

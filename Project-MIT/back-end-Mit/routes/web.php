@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\AboutMitController;
 use App\Http\Controllers\Admissions_AidController;
+use App\Http\Controllers\AluminController;
+use App\Http\Controllers\AlumniController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CampusLifeController;
 use App\Http\Controllers\PostController;
@@ -13,14 +15,17 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\EducationController;
 use App\Http\Controllers\InnovationController;
-use App\Http\Controllers\Newmit_CategoriesController;
+use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\NewMitController;
 use App\Http\Controllers\ResearchController;
 use App\Http\Controllers\StaffController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\TeacherController;
+use App\Http\Controllers\UserController;
 use App\Models\AboutMit;
 use App\Models\Categorie;
+use PhpParser\Node\Stmt\Switch_;
+use Stichoza\GoogleTranslate\GoogleTranslate;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,6 +38,7 @@ use App\Models\Categorie;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
 
 
 Route::get("/" , [AuthController::class,"login"])
@@ -48,18 +54,39 @@ Route::Post("logout", [AuthController::class,"logout"])->name("logout");
 // Group of routes requiring authentication
 Route::middleware("auth")->group(function() {
 
-    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
+    Route::get("/lang{lang}", [LanguageController::class , 'switchlang'])->name('lang.switch');
+
+    Route::get('/dashboard', [LanguageController::class, 'index'])->name('dashboard');
 
     Route::get("/news" , [NewMitController::class, "index"])->name("new");
 
-    Route::get('/newmit_categories', [Newmit_CategoriesController::class, 'index'])->name('newmit_categories');
-    Route::get("/newmit_categorie_create" , [Newmit_CategoriesController::class, "create"])->name("newmit_categorie_create");
-    Route::post("/newmit_categorie_post", [Newmit_CategoriesController::class, "store"])->name("newmit_categorie_store");
-    Route::get("/newmit_categories/{id}", [Newmit_CategoriesController::class, "show"])->name("newmit_categorie_show");
-    Route::delete("/newmit_categorie/delete/{id}", [Newmit_CategoriesController::class, "delete"])->name("newmit_categorie_delete");
-    Route::get("/newmit_categorie/{id}/edit", [Newmit_CategoriesController::class, "edit"])->name("newmit_categorie_edit");
-    Route::put("/newmit_categorie/{id}", [Newmit_CategoriesController::class, "update"])->name("newmit_categorie_update");
-    Route::get('/newmit_categorie/search', [Newmit_CategoriesController::class, 'search'])->name('newmit_categorie_search');
+    Route::get('/alumnis', [AlumniController::class, 'index'])->name('alumnis');
+    Route::get("alumni_create" , [AlumniController::class, "create"])->name("alumni_create");
+    Route::post("alumni_post", [AlumniController::class, "store"])->name("alumni_store");
+    Route::get("/alumnis/{id}", [AlumniController::class, "show"])->name("alumni_show");
+    Route::delete("/alumni/delete/{id}", [AlumniController::class, "delete"])->name("alumni_delete");
+    Route::get("/alumni/{id}/edit", [AlumniController::class, "edit"])->name("alumni_edit");
+    Route::put("/alumni/{id}", [AlumniController::class, "update"])->name("alumni_update");
+    Route::get('/alumni/search', [AlumniController::class, 'search'])->name('alumni_search');
+
+    Route::get('/aboutmits', [AboutMitController::class, 'index'])->name('aboutmits');
+    Route::get("aboutmit_create" , [AboutMitController::class, "create"])->name("aboutmit_create");
+    Route::post("aboutmit_post", [AboutMitController::class, "store"])->name("aboutmit_store");
+    Route::get("/aboutmits/{id}", [AboutMitController::class, "show"])->name("aboutmit_show");
+    Route::delete("/aboutmit/delete/{id}", [AboutMitController::class, "delete"])->name("aboutmit_delete");
+    Route::get("/aboutmit/{id}/edit", [AboutMitController::class, "edit"])->name("aboutmit_edit");
+    Route::put("/aboutmit/{id}", [AboutMitController::class, "update"])->name("aboutmit_update");
+    Route::get('/aboutmit/search', [AboutMitController::class, 'search'])->name('aboutmit_search');
+
+    Route::get('/categories', [CategorieController::class, 'index'])->name('categories');
+    Route::get("categorie_create" , [CategorieController::class, "create"])->name("categorie_create");
+    Route::post("categorie_post", [CategorieController::class, "store"])->name("categorie_store");
+    Route::get("/categories/{id}", [CategorieController::class, "show"])->name("categorie_show");
+    Route::delete("/categorie/delete/{id}", [CategorieController::class, "delete"])->name("categorie_delete");
+    Route::get("/categorie/{id}/edit", [CategorieController::class, "edit"])->name("categorie_edit");
+    Route::put("/categorie/{id}", [CategorieController::class, "update"])->name("categorie_update");
+    Route::get('/categorie/search', [CategorieController::class, 'search'])->name('categorie_search');
 
     Route::get('/campuslifes', [CampusLifeController::class, 'index'])->name('campuslifes');
     Route::get("/campuslife_create" , [CampusLifeController::class, "create"])->name("campuslife_create");
@@ -142,6 +169,18 @@ Route::middleware("auth")->group(function() {
     Route::put("/student/{id}", [StudentController::class, "update"])->name("student_update");
     Route::get('/student/search', [StudentController::class, 'search'])->name('student_search');
 
+    Route::get('/users', [UserController::class, 'index'])->name('users');
+    Route::get("/user_create" , [UserController::class, "create"])->name("user_create");
+    Route::post("/user_store", [UserController::class, "store"])->name("user_store");
+    Route::get("/users/{id}", [UserController::class, "show"])->name("user_show");
+    Route::delete("/user/delete/{id}", [UserController::class, "delete"])->name("user_delete");
+    Route::get("/user/{id}/edit", [UserController::class, "edit"])->name("user_edit");
+    Route::put("/user/{id}", [UserController::class, "update"])->name("user_update");
+    Route::get('/user/search', [UserController::class, 'search'])->name('user_search');
+
+    // Route::get("/error", function(){
+    //     return view('page.index_error');
+    // });
 });
 
 

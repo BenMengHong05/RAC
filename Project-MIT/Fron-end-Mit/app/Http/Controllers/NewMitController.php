@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Categorie;
 use App\Models\NewMit;
 use Illuminate\Http\Request;
 
@@ -12,10 +13,14 @@ class NewMitController extends Controller
     {
 
 
-        $objNewmit =NewMit::orderby('id', 'asc')->get();
-
-        return view('index.index', compact('objNewmit'));
+        $objNewmits =NewMit::where('categorie_id','9')->orderby('id', 'desc')->get();
+        // $objCategories = Categorie::with('newmits')->get();
+        // $objCategories = Categorie::with('newmits')
+        //                 ->where('id','9')
+        //                 ->orderBy('id', 'desc')->get();
+        return view('index.index', compact('objNewmits'));
     }
+
 
     /**
      * Show the form for creating a new resource.

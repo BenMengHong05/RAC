@@ -1,6 +1,9 @@
 
 <div class="content-wrapper">
     <div class="container-xxl flex-grow-1 container-p-y">
+        <div class="mb-4">
+            <h2 class="m-0 p-0 text-muted" >{{__('messages.Contents')}} / <span class="text-dark">{{__('messages.Categories')}}</span></h2>
+        </div>
         <div class="card">
             @if (Session::has('success'))
             <div class="alert alert-success">
@@ -17,22 +20,24 @@
                 {{ Session::get('delete') }}
             </div>
         @endif
-            <div class="car-header d-flex align-items-center justify-content-between" style="min-height: 7vh">
-                <div class="add d-flex align-items-center " style="width: 60%">
-                    <h5 class="m-0 p-0  ps-4" style="font-family: sans-serif;">newmit_categorie</h5>
-                    <form action="{{ route('newmit_categorie_create')}}" class="ps-2" method="GET">
-                        @csrf
-                        <button type="submit" class="btn btn-success ps-4 px-4 mx-2">
-                            Add
+            <div class="car-header d-flex mt-3 align-items-center justify-content-between" style="min-height: 7vh">
+                <div class="add d-flex align-items-center gap-4 ms-4 " style="width: 60%">
+                    <form action="{{ route('categorie_search') }}" method="GET" class="d-flex">
+                        <input type="text" class="form-control " name="search" value="{{ request('search') }}"
+                            id="search" placeholder="Search..." style="width: 100%">
+                        <button class="btn btn-primary mx-2 ps-3 px-3 " style="white-space: nowrap" type="submit">
+                            <i class='bx bx-search-alt'></i>
+                            {{__('messages.Search')}}
                         </button>
                     </form>
                 </div>
-                <form action="{{ route('newmit_categorie_search') }}" method="GET" class="d-flex">
-                    <input type="text" class="form-control " name="search" value="{{ request('search') }}" id="search" placeholder="Search..." style="width: 100%">
-                    <button class="btn btn-primary mx-2 " type="submit">Search</button>
-
+                <form action="{{ route('categorie_create') }}" class="ps-2 " method="GET">
+                    @csrf
+                    <button type="submit" class="btn btn-success ps-3 px-3 mx-4">
+                        <i class='bx bx-plus'></i>
+                        {{__('messages.Add')}}
+                    </button>
                 </form>
-
             </div>
             <div class="table-responsive  text-nowrap">
                 <table class="table">
@@ -43,17 +48,17 @@
                             <th>Actions</th>
                         </tr>
                     </thead>
-                    <tbody class="table-border-bottom-0 overflow-auto">
+                    <tbody class="table-border-bottom-0 overflow-auto" id="search-table">
 
-                        @if ($newmit_categories->isEmpty())
+                        @if ($categories->isEmpty())
                             <tr>
-                                <td colspan="5" class="text-center">No newmit_categorie found.</td>
+                                <td colspan="3" class="text-center">No categorie found.</td>
                             </tr>
                         @else
-                            @foreach ($newmit_categories as $index => $newmit_categorie)
+                            @foreach ($categories as $index => $categorie)
                                 <tr>
                                     <td>{{ $index + 1 }}</td>
-                                    <td>{{ $newmit_categorie->name }}</td>
+                                    <td>{{ $categorie->name }}</td>
                                     <td>
                                         <div class="dropdown">
                                             <button type="button" class="btn p-0 dropdown-toggle hide-arrow"
@@ -62,19 +67,19 @@
                                             </button>
                                             <div class="dropdown-menu">
                                                 <a class="dropdown-item"
-                                                    href="{{ route('newmit_categorie_show', $newmit_categorie->id) }}"><i
-                                                        class="bx bx-duplicate me-1"></i>View</a>
+                                                    href="{{ route('categorie_show', $categorie->id) }}"><i
+                                                        class="bx bx-duplicate me-1"></i>{{__('messages.Detail')}}</a>
                                                 <a class="dropdown-item"
-                                                    href="{{ route('newmit_categorie_edit', $newmit_categorie->id) }}"><i
-                                                        class="bx bx-edit-alt me-1"></i>Edit</a>
-                                                <form id="delete-form-{{ $newmit_categorie->id }}"
-                                                    action="{{ route('newmit_categorie_delete', ['id' => $newmit_categorie->id]) }}"
+                                                    href="{{ route('categorie_edit', $categorie->id) }}"><i
+                                                        class="bx bx-edit-alt me-1"></i>{{__('messages.Edit')}}</a>
+                                                <form id="delete-form-{{ $categorie->id }}"
+                                                    action="{{ route('categorie_delete', ['id' => $categorie->id]) }}"
                                                     method="POST" style="display: inline;">
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="button" class="dropdown-item"
-                                                        onclick="confirmDelete({{ $newmit_categorie->id }})">
-                                                        <i class="bx bx-trash me-1"></i> Delete
+                                                    <button type="button" class="dropdown-item text-danger"
+                                                        onclick="confirmDelete({{ $categorie->id }})">
+                                                        <i class="bx bx-trash me-1"></i>{{__('messages.Delete')}}
                                                     </button>
                                                 </form>
                                             </div>
@@ -94,7 +99,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
-    function confirmDelete(newmit_categorieId) {
+    function confirmDelete(categorieId) {
         Swal.fire({
             title: "Are you sure?",
             text: "You won't be able to revert this!",
@@ -106,10 +111,10 @@
         }).then((result) => {
             if (result.isConfirmed) {
                 // Submit the form after confirmation
-                document.getElementById('delete-form-' + newmit_categorieId).submit();
+                document.getElementById('delete-form-' + categorieId).submit();
                 Swal.fire({
                     title: "Deleted!",
-                    text: "The newmit_categorie has been deleted.",
+                    text: "The categorie has been deleted.",
                     icon: "success"
                 });
             }

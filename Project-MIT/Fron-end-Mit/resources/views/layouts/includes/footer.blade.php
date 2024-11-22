@@ -1,7 +1,7 @@
 <footer class="container-fluid home-footer  education-footer ms-0 p-4">
     <div class="row d-flex align-items-center justify-content-center" style="min-height: 18vh">
         <div class=" col-lg-2 d-flex align-items-start justify-content-center " style="min-width: 20vh;min-height: 18vh">
-            <img class="MIT-img"  src="{{ asset('images/Massachusetts_Institute_of_Technology-Logo.wine.png') }}" alt=""
+            <img class="MIT-img"  src="{{ url('images/Massachusetts_Institute_of_Technology-Logo.wine.png') }}" alt=""
                 style="width: 70%; height: 100%;">
         </div>
         <div class="col-lg-10 footer-menu">
@@ -79,6 +79,19 @@
 </script>
 
 @stack('script')
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#mySearch").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+
 </body>
 
 </html>

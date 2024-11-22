@@ -6,22 +6,22 @@
         <script>
           document.write(new Date().getFullYear());
         </script>
-        , made with by
-        <a href="https://themeselection.com" target="_blank" class="footer-link fw-medium">MH</a>
+        , Made With By
+        <a href="https://www.facebook.com/lyhong.ben" target="_blank" class="footer-link fw-medium">PAC</a>
       </div>
       <div class="d-none d-lg-inline-block">
-        <a href="https://themeselection.com/license/" class="footer-link me-4" target="_blank">License</a>
-        <a href="https://themeselection.com/" target="_blank" class="footer-link me-4">More Themes</a>
+        <a href="" class="footer-link me-4" target="_blank">License</a>
+        <a href="" target="_blank" class="footer-link me-4">More Themes</a>
 
         <a
-          href="https://demos.themeselection.com/sneat-bootstrap-html-admin-template/documentation/"
+          href=""
           target="_blank"
           class="footer-link me-4"
           >Documentation</a
         >
 
         <a
-          href="https://github.com/themeselection/sneat-html-admin-template-free/issues"
+          href=""
           target="_blank"
           class="footer-link"
           >Support</a
@@ -29,4 +29,15 @@
       </div>
     </div>
   </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#search").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#search-table tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
   <!-- / Footer -->

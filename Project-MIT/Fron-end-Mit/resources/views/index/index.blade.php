@@ -2,3 +2,4 @@
 @section('content')
     @include('index.includes.body')
 @endsection
+

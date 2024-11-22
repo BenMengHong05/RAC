@@ -13,21 +13,20 @@
         <div class="container mt-5">
             <div class="row ">
                 <h1>
-                    MIT’s alumni — entrepreneurs, researchers, policymakers, and above all, leaders — have helped to shape the world we know today. From 3-D printing to bionic prostheses, many of the products and services that define the modern world have sprung from the minds and hands of MIT’s brilliant alumni community.
+                    {{$objAlumnis->title}}
                 </h1>
             </div>
         </div>
         <div class="container mt-5">
             <div class="row mt-2">
                 <div class="col-lg-6 education-text">
-                    <h5>MIT’s nearly 147,000 alumni represent one of the most talented, innovative, and networked communities on the planet. Many remain deeply involved in the life of the Institute. They volunteer, serve on boards, head up regional alumni clubs, and generously support MIT’s students, faculty, and staff. As individuals, their contributions are extraordinary. As a community, their impact is infinite.
+                    <h5>
+                        {{$objAlumnis->description}}
                     </h5>
                 </div>
                 <div class="col-lg-6 education-img" style="min-height: 40vh">
                     <div class="ed-img">
-                        <video controls style="min-height: auto;max-width: 100%">
-                            <source src="{{ asset('images/alumnitamplate.mp4') }}" type="video/mp4">
-                        </video>
+                        <img src="{{ asset('images/'. $objAlumnis->image) }}" alt="Education Image" class="img-fluid" style="width: 70vh; height: 50vh;">
                     </div>
                 </div>
             </div>
@@ -53,7 +52,7 @@
             </div>
             <div class="col-lg-6  ">
                 <div class="img3  d-flex flex-column align-items-center justify-content-end">
-                    <img src="{{ asset('images/Alumni1.jpeg') }}" alt="" width="70%" class="" >
+                    <img src="{{ url('images/Alumni1.jpeg') }}" alt="" width="70%" class="" >
                     <p class="mt-3">MIT alumni and friends participating in a community service project</p>
                 </div>
             </div>
@@ -79,12 +78,12 @@
             <div class="col-lg-6" style="min-width: 50%">
                 <div class="campuslife d-flex  justify-content-center gap-5 ">
                     <div class="col-lg-3 " style="width: 29vh;">
-                        <img src="{{ asset('images/Alumni2.jpeg') }}" class="figure-img img-fluid "  alt="" style="width: 29vh;height: 40%;">
+                        <img src="{{ url('images/Alumni2.jpeg') }}" class="figure-img img-fluid "  alt="" style="width: 29vh;height: 40%;">
                         <p class="mt-3"><span>a.</span>lum-to-student mentoring in action</p>
                         <p><span>a.</span>Presenting at the annual Alumni Leadership Conference (ALC)</p>
                     </div>
                     <div class="col-lg-3 " style="width: 20vh" >
-                        <img src="{{ asset('images/Alumni3.jpeg')}} " class="figure-img img-fluid "  alt="" >
+                        <img src="{{ url('images/Alumni3.jpeg')}} " class="figure-img img-fluid "  alt="" >
                     </div>
                 </div>
             </div>
@@ -98,56 +97,56 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <figure>
-                            <img src="{{asset('images/Alumni4.jpeg')}}" alt="" class="img-fluid img"  style="width: 100%;height: 25vh;object-fit:cover">
+                            <img src="{{url('images/Alumni4.jpeg')}}" alt="" class="img-fluid img"  style="width: 100%;height: 25vh;object-fit:cover">
                         </figure>
                     </div>
                     <div class="col-lg-6">
                         <figure>
-                            <img src="{{asset('images/Alumni5.jpeg')}}" alt="" class="img-fluid img"  style="width: 100%;height: 25vh;object-fit:cover">
+                            <img src="{{url('images/Alumni5.jpeg')}}" alt="" class="img-fluid img"  style="width: 100%;height: 25vh;object-fit:cover">
                         </figure>
                     </div>
                 </div>
                 <div class="row ">
                     <div class="col-lg-6">
                         <figure>
-                            <img src="{{asset('images/Alumni7.jpeg')}}" alt="" class="img-fluid img"  style="width: 100%;height: 25vh;object-fit:cover">
+                            <img src="{{url('images/Alumni7.jpeg')}}" alt="" class="img-fluid img"  style="width: 100%;height: 25vh;object-fit:cover">
                         </figure>
                     </div>
                     <div class="col-lg-6">
                         <figure>
-                            <img src="{{asset('images/Alumni8.jpeg')}}" alt="" class="img-fluid img"  style="width: 100%;height: 25vh;object-fit:cover">
+                            <img src="{{url('images/Alumni8.jpeg')}}" alt="" class="img-fluid img"  style="width: 100%;height: 25vh;object-fit:cover">
                         </figure>
                     </div>
                 </div>
             </div>
             <div class="col-lg-6 ">
                 <figure>
-                    <img src="{{asset('images/Alumni6.jpeg')}}" alt="" class="img-fluid img"  style="width: 100%;height: 51.8vh;object-fit:cover">
+                    <img src="{{url('images/Alumni6.jpeg')}}" alt="" class="img-fluid img"  style="width: 100%;height: 51.8vh;object-fit:cover">
                 </figure>
             </div>
         </div>
         <div class="row ">
             <div class="col-lg-3">
                 <figure>
-                    <img src="{{asset('images/Alumni9.jpeg')}}" alt="" class="img-fluid img"  style="width: 100%;height: 28.8vh;;object-fit:cover">
+                    <img src="{{url('images/Alumni9.jpeg')}}" alt="" class="img-fluid img"  style="width: 100%;height: 28.8vh;;object-fit:cover">
                 </figure>
 
             </div>
             <div class="col-lg-3">
                 <figure>
-                    <img src="{{asset('images/Alumni10.jpeg')}}" alt="" class="img-fluid img"  style="width: 100%;height: 28.8vh;;object-fit:cover">
+                    <img src="{{url('images/Alumni10.jpeg')}}" alt="" class="img-fluid img"  style="width: 100%;height: 28.8vh;;object-fit:cover">
                 </figure>
 
             </div>
             <div class="col-lg-3">
                 <figure>
-                    <img src="{{asset('images/Alumni11.jpeg')}}" alt="" class="img-fluid img"  style="width: 100%;height: 28.8vh;object-fit:cover">
+                    <img src="{{url('images/Alumni11.jpeg')}}" alt="" class="img-fluid img"  style="width: 100%;height: 28.8vh;object-fit:cover">
                 </figure>
 
             </div>
             <div class="col-lg-3">
                 <figure>
-                    <img src="{{asset('images/Alumni12.jpeg')}}" alt="" class="img-fluid img"  style="width: 100%;height: 28.8vh;;object-fit:cover">
+                    <img src="{{url('images/Alumni12.jpeg')}}" alt="" class="img-fluid img"  style="width: 100%;height: 28.8vh;;object-fit:cover">
                 </figure>
 
             </div>

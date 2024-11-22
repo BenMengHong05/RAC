@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\AboutMitController;
 use App\Http\Controllers\Admissions_AidController;
+use App\Http\Controllers\AlumniController;
 use App\Http\Controllers\Campus_LifeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EducationController;
@@ -32,6 +34,11 @@ Route::get('/innovation',[InnovationController::class,'index'])->name('innovatio
 Route::get('/admissions_aid',[Admissions_AidController::class,'index'])->name('admissions_aid');
 Route::get('/campuslife',[Campus_LifeController::class,'index'])->name('campuslife');
 Route::get('/news',[Information_NewController::class,'index'])->name('news');
+Route::get('/alumni',[AlumniController::class,'index'])->name('alumnu');
+Route::get('/aboutmit',[AboutMitController::class, 'index'])->name('aboutmit');
+Route::get("/error", function(){
+    return view('page.index_error');
+});
 
 
 

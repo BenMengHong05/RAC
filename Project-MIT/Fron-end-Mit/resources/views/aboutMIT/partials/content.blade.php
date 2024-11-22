@@ -13,9 +13,7 @@
         <div class="container mt-5">
             <div class="row ">
                 <h1>
-                    The MIT community is driven by a shared purpose: to make a better world through education, research,
-                    and innovation. We are fun and quirky, elite but not elitist, inventive and artistic, obsessed with
-                    numbers, and welcoming to talented people regardless of where they come from.
+                    {{$objAboutMits->title}}
                 </h1>
             </div>
         </div>
@@ -23,12 +21,7 @@
             <div class="row mt-2 d-flex align-items0center justify-content-between">
                 <div class="col-lg-6 education-text">
                     <h5>
-                        Founded to accelerate the nation’s industrial revolution, MIT is profoundly American. With
-                        ingenuity and drive, our graduates have invented fundamental technologies, launched new
-                        industries, and created millions of American jobs. At the same time, and without the slightest
-                        sense of contradiction, MIT is profoundly global. Our community gains tremendous strength as a
-                        magnet for talent from around the world. Through teaching, research, and innovation, MIT’s
-                        exceptional community pursues its mission of service to the nation and the world.
+                        {{$objAboutMits->description}}
                     </h5>
                     <div class="about-mit">
                         <h4>Mission and Values</h4>
@@ -43,9 +36,7 @@
                 </div>
                 <div class="col-lg-6 education-img" style="min-height: 40vh">
                     <div class="ed-img">
-                        <video controls style="min-height: auto;max-width: 100%">
-                            <source style="height: auto; object-fit:cover;" src="{{ asset('images/about-MIT-5 (1).mp4') }}" type="video/mp4" >
-                        </video>
+                        <img src="{{ asset('images/' . $objAboutMits->image) }}" alt="Education Image" class="img-fluid" style="width: 70vh; height: 50vh;">
                     </div>
                 </div>
             </div>
@@ -102,13 +93,13 @@
             <div class="col-lg-6  " >
                 <div class="campuslife d-flex  justify-content-center gap-5 ">
                     <div class="col-lg-3 " style="width: 29vh;">
-                        <img style="height: auto; object-fit:cover  " src="{{ asset('images/aboutslide1-1.jpg') }}" class="figure-img img-fluid img-fluid-1 " alt="">
+                        <img style="height: auto; object-fit:cover  " src="{{ url('images/aboutslide1-1.jpg') }}" class="figure-img img-fluid img-fluid-1 " alt="">
                         <p class="mt-3"><span class="text-danger">a.</span>A student presents his work in an architecture critique.</p>
                         <p><span class="text-danger">b.</span>A responsive environment developed at MIT reacts as a visiting artist plays
                             the cello.</p>
                     </div>
                     <div class="col-lg-3 " style="width: 20vh">
-                        <img style="height: auto; object-fit:cover " src="{{ asset('images/aboutslide2-1.jpg') }} " class="figure-img img-fluid img-fluid-1 "
+                        <img style="height: auto; object-fit:cover " src="{{ url('images/aboutslide2-1.jpg') }} " class="figure-img img-fluid img-fluid-1 "
                             alt="">
                     </div>
                 </div>
@@ -139,14 +130,14 @@
             <div class="col-lg-6  ">
                 <div class="campuslife d-flex  justify-content-center gap-5 ">
                     <div class="col-lg-3 " style="width: 29vh;">
-                        <img src="{{ asset('images/aboutslide3-1.jpg') }}" class="figure-img img-fluid " alt=""
+                        <img src="{{ url('images/aboutslide3-1.jpg') }}" class="figure-img img-fluid " alt=""
                         style="height: auto; object-fit:cover ">
                         <p class="mt-3"><span class="text-danger">a.</span>MIT’s low ratio of <span class="ul-hover-4">student</span>-to-<span class="ul-hover-4">faculty and instructional staff </span> promotes intensive teaching.
                         </p>
                         <p><span class="text-danger">b.</span>In 2023–24, MIT students came from all 50 states, the District of Columbia, four territories, and 136 foreign countries.</p>
                     </div>
                     <div class="col-lg-3 " style="width: 20vh">
-                        <img style="height: auto; object-fit:cover " src="{{ asset('images/aboutslide4-1.jpg') }} " class="figure-img img-fluid "
+                        <img style="height: auto; object-fit:cover " src="{{ url('images/aboutslide4-1.jpg') }} " class="figure-img img-fluid "
                             alt="">
                     </div>
                 </div>
@@ -169,14 +160,14 @@
             <div class="col-lg-6  ">
                 <div class="campuslife d-flex  justify-content-center gap-5 ">
                     <div class="col-lg-3 " style="width: 29vh;">
-                        <img src="{{ asset('images/aboutslide5-1.jpg') }}" class="figure-img img-fluid " alt=""
+                        <img src="{{ url('images/aboutslide5-1.jpg') }}" class="figure-img img-fluid " alt=""
                             style="height: auto; object-fit:cover">
                         <p class="mt-3"><span class="text-danger">a.</span>MIT Health offers numerous classes through Community Wellness.
                         </p>
                         <p><span class="text-danger">b.</span>Students relieve stress by cuddling with canines from the Puppy Lab.</p>
                     </div>
                     <div class="col-lg-3 " style="width: 20vh">
-                        <img style="height: auto ; object-fit:cover" src="{{ asset('images/aboutslide6-1.jpg') }} " class="figure-img img-fluid "
+                        <img style="height: auto ; object-fit:cover" src="{{ url('images/aboutslide6-1.jpg') }} " class="figure-img img-fluid "
                             alt="">
                     </div>
                 </div>
@@ -211,7 +202,7 @@
             <div class="col-lg-6  ">
                 <div class="campuslife d-flex  justify-content-center gap-5 ">
                     <div class="col-lg-6 "  style="width: 45vh;">
-                        <img style="height: auto; object-fit:cover" src="{{ asset('images/aboutslide7-1.jpg') }}" class="figure-img img-fluid " alt="">
+                        <img style="height: auto; object-fit:cover" src="{{ url('images/aboutslide7-1.jpg') }}" class="figure-img img-fluid " alt="">
                         <p>President Sally Kornbluth</p>
                     </div>
                 </div>
@@ -237,7 +228,7 @@
             <div class="col-lg-6  ">
                 <div class="campuslife d-flex  justify-content-center gap-5 ">
                     <div class="col-lg-6 " style="width: 45vh;">
-                        <img style="height: auto;object-fit:cover"  src="{{ asset('images/aboutslide8-1.jpg') }}" class="figure-img img-fluid " alt="">
+                        <img style="height: auto;object-fit:cover"  src="{{ url('images/aboutslide8-1.jpg') }}" class="figure-img img-fluid " alt="">
                         <p>Aerial view of the campus, with a glimpse of the Boston skyline</p>
                     </div>
                 </div>
@@ -250,20 +241,20 @@
         <div class="row ">
             <div class="col-md-6 col-lg-6" style="height: 100%">
                 <figure>
-                    <img src="{{asset('images/slider-footer-about-mit1.jpeg')}}" class="img-fluid img" alt="" style="width: 100%;height: 51.5vh; object-fit:cover">
+                    <img src="{{url('images/slider-footer-about-mit1.jpeg')}}" class="img-fluid img" alt="" style="width: 100%;height: 51.5vh; object-fit:cover">
                 </figure>
             </div>
             <div class="col-md-6 col-lg-6">
                 <div class="row">
                     <div class="col-lg-6">
                         <figure>
-                            <img src="{{asset('images/slider-footer-about-mit2.jpeg')}}"  class="img-fluid img" style="width: 100%;height: 25vh; object-fit:cover" >
+                            <img src="{{url('images/slider-footer-about-mit2.jpeg')}}"  class="img-fluid img" style="width: 100%;height: 25vh; object-fit:cover" >
                         </figure>
                         <figure>
                     </div>
                     <div class="col-lg-6">
                         <figure>
-                            <img src="{{asset('images/slider-footer-about-mit3.jpeg')}}"  class="img-fluid img" style="width: 100%;height: 25vh;  object-fit:cover" >
+                            <img src="{{url('images/slider-footer-about-mit3.jpeg')}}"  class="img-fluid img" style="width: 100%;height: 25vh;  object-fit:cover" >
                         </figure>
                         <figure>
                     </div>
@@ -271,13 +262,13 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <figure>
-                            <img src="{{asset('images/slider-footer-about-mit4.jpeg')}}"  class="img-fluid img" style="width: 100%;height: 25vh;  object-fit:cover" >
+                            <img src="{{url('images/slider-footer-about-mit4.jpeg')}}"  class="img-fluid img" style="width: 100%;height: 25vh;  object-fit:cover" >
                         </figure>
                         <figure>
                     </div>
                     <div class="col-lg-6">
                         <figure>
-                            <img src="{{asset('images/slider-footer-about-mit5.jpeg')}}"  class="img-fluid img" style="width: 100%;height: 25vh;  object-fit:cover" >
+                            <img src="{{url('images/slider-footer-about-mit5.jpeg')}}"  class="img-fluid img" style="width: 100%;height: 25vh;  object-fit:cover" >
                         </figure>
                         <figure>
                     </div>
@@ -287,19 +278,19 @@
         <div class="row ">
             <div class="col-lg-3">
                 <figure>
-                    <img src="{{asset('images/slider-footer-about-mit6.jpeg')}}"  class="img-fluid img" style="width: 100%;height: 25vh; object-fit:cover" >
+                    <img src="{{url('images/slider-footer-about-mit6.jpeg')}}"  class="img-fluid img" style="width: 100%;height: 25vh; object-fit:cover" >
                 </figure>
                 <figure>
             </div>
             <div class="col-lg-3">
                 <figure>
-                    <img src="{{asset('images/slider-footer-about-mit7.jpeg')}}"  class="img-fluid img" style="width: 100%;height: 25vh; object-fit:cover" >
+                    <img src="{{url('images/slider-footer-about-mit7.jpeg')}}"  class="img-fluid img" style="width: 100%;height: 25vh; object-fit:cover" >
                 </figure>
                 <figure>
             </div>
             <div class="col-lg-3">
                 <figure>
-                    <img src="{{asset('images/slider-footer-about-mit8.jpeg')}}"  class="img-fluid img" style="width: 100%;height: 25vh; object-fit:cover" >
+                    <img src="{{url('images/slider-footer-about-mit8.jpeg')}}"  class="img-fluid img" style="width: 100%;height: 25vh; object-fit:cover" >
                 </figure>
                 <figure>
             </div>

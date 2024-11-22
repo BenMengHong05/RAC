@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row">
-        <div class="col-xl-2">
+        <div class="col-xl-2 ">
             @include('layout.partials.siderbar')
         </div>
         <div class="col-xl-10">

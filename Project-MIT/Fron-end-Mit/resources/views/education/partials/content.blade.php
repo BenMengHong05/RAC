@@ -21,14 +21,14 @@
         </div>
         <div class="container mt-5">
             <div class="row mt-2">
-                <div class="col-lg-6 education-text">
+                <div class="col-xl-6 education-text">
                     <h5>
                         {{$educations->description}}
                     </h5>
                 </div>
-                <div class="col-lg-6 education-img" style="min-height: 40vh">
+                <div class="col-xl-6 education-img" style="min-height: 40vh">
                     <div class="ed-img">
-                       <img src="{{ asset('images/' . $educations->image) }}" alt="Education Image" style="width: 60vh; height: 40vh;">
+                       <img src="{{ asset('images/' . $educations->image) }}" alt="Education Image" class="img-fluid" style="width: 70vh; height: 50vh;">
                     </div>
                 </div>
             </div>
@@ -165,6 +165,7 @@
             </div>
             <div class="col-lg-6">
                 <ul class="education-ul">
+
                     <h4>Top Resources</h4>
                     <li><span>01.</span><a href=""> Registrar’s Office</a></li>
                     <li><span>02.</span><a href=""> Course Catalog (MIT Bulletin)</a></li>
@@ -185,19 +186,19 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <figure>
-                            <img style="min-height: 50vh;object-fit:cover"  src="{{asset('images/imgeducation1.jpg')}}" class="img-fluid img" alt="">
+                            <img style="min-height: 50vh;object-fit:cover"  src="{{url('images/imgeducation1.jpg')}}" class="img-fluid img" alt="">
                         </figure>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-6">
                         <figure>
-                            <img style="min-height: 25vh;object-fit:cover" src="{{asset('images/imgeducation2.jpeg')}}" class="img-fluid img" alt="">
+                            <img style="min-height: 25vh;object-fit:cover" src="{{url('images/imgeducation2.jpeg')}}" class="img-fluid img" alt="">
                         </figure>
                     </div>
                     <div class="col-lg-6">
                         <figure>
-                            <img style="min-height: 25vh;object-fit:cover" src="{{asset('images/imgeducation-3.jpg')}}" class="img-fluid img" alt="">
+                            <img style="min-height: 25vh;object-fit:cover" src="{{url('images/imgeducation-3.jpg')}}" class="img-fluid img" alt="">
                         </figure>
                     </div>
                 </div>
@@ -206,18 +207,18 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <figure>
-                            <img style="min-height: 25vh;object-fit:cover" src="{{asset('images/imgeduaction.jpg')}}" class="img-fluid img" alt="">
+                            <img style="min-height: 25vh;object-fit:cover" src="{{url('images/imgeduaction.jpg')}}" class="img-fluid img" alt="">
                         </figure>
                     </div>
                     <div class="col-lg-6">
                         <figure>
-                            <img style="min-height: 25vh;object-fit:cover" src="{{asset('images/imgeducation.jpg')}}" class="img-fluid img" alt="">
+                            <img style="min-height: 25vh;object-fit:cover" src="{{url('images/imgeducation.jpg')}}" class="img-fluid img" alt="">
                         </figure>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-12">
-                        <img style="min-height: 50vh;object-fit:cover" src="{{asset('images/imgeducation6.jpg')}}" class="img-fluid img" alt="">
+                        <img style="min-height: 50vh;object-fit:cover" src="{{url('images/imgeducation6.jpg')}}" class="img-fluid img" alt="">
                     </div>
                 </div>
             </div>

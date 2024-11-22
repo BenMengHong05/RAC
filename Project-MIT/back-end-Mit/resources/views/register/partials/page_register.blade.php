@@ -85,7 +85,7 @@
             </form>
             <p class="text-center">
               <span>Already have an account?</span>
-              <a href="/auth">
+              <a href="/">
                 <span>Sign in instead</span>
               </a>
             </p>

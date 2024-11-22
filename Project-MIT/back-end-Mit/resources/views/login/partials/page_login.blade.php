@@ -31,6 +31,7 @@
                     <form id="formAuthentication" class="mb-3" action="{{ route('login.post') }}" method="POST">
                         @csrf
                         <div class="mb-3">
+                 
                             <label for="email" class="form-label">Email or Username</label>
                             <input type="text" class="form-control" id="email" name="email"
                                 placeholder="Enter your email or username" autofocus required />

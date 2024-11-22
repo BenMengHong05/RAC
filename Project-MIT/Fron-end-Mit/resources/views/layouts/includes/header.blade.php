@@ -17,6 +17,8 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="{{url('css/MIT.css')}}">
     @stack('css')
+    <!-- jQuery -->
+    
 </head>
 <body>
 @include('layouts.partials.nav')

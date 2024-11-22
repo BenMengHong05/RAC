@@ -84,6 +84,7 @@ return [
 
     'locale' => 'en',
 
+
     /*
     |--------------------------------------------------------------------------
     | Application Fallback Locale
@@ -96,6 +97,11 @@ return [
     */
 
     'fallback_locale' => 'en',
+    'languages'=>[
+        'en' => 'English',
+        'kh'=>'Khmer',
+        'zh'=>'Chinese',
+    ],
 
     /*
     |--------------------------------------------------------------------------
@@ -210,6 +216,7 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // 'ExampleClass' => App\Example\ExampleClass::class,
+        'GoogleTranslate' => \Stichoza\GoogleTranslate\GoogleTranslate::class,
     ])->toArray(),
 
 ];

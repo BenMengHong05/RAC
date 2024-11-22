@@ -11,8 +11,8 @@
                     <div class="container-xxl flex-grow-1 container-p-y">
                         <div class="row g-4 mb-5">
                             <div class="col-lg-12">
+                                <h3>{{isset($teacherEdit->id) ? "Update Teacher MIT " : "Add Teacher MIT"}}</h3>
                                 <div class="card h-100 p-4">
-                                    <h3>{{isset($teacherEdit->id) ? "Update Teacher MIT " : "Add Teacher MIT"}}</h3>
                                     <p class="card-text">
                                         <form action="{{ isset($teacherEdit) && $teacherEdit->id ? route('teacher_update', $teacherEdit->id) : route('teacher_store') }}" method="POST" enctype="multipart/form-data">
                                             @csrf
@@ -20,18 +20,6 @@
                                                 @method('PUT')
                                             @endif
                                             <div class="mb-3">
-                                                <label for="image" class="form-label">Image</label>
-
-                                                @if(isset($teacherEdit) && $teacherEdit->image)
-                                                    <!-- Display the current image if it exists -->
-                                                    <div class="mb-3">
-                                                        <img src="{{ asset('images/' . $teacherEdit->image) }}" alt="Current Image" style="max-width: 150px;">
-                                                    </div>
-                                                @endif
-
-                                                <!-- File input for uploading a new image -->
-                                                <input type="file" class="form-control" id="image" name="image" {{ isset($teacherEdit) ? '' : 'required' }}>
-
                                                 <label for="name" class="form-label">Name</label>
                                                 <input type="text" class="form-control" value="{{isset($teacherEdit)&& $teacherEdit->id ? old('name' , $teacherEdit->name): ''}}" id="name" name="name" required>
                                                 <label for="sex" class="form-label">Sex</label>
@@ -46,10 +34,19 @@
 
                                                 <label for="phone" class="form-label">Phone</label>
                                                 <input type="text" name="phone" id="phone" class="form-control"value="{{ isset($teacherEdit) && $teacherEdit->id ? old('phone', $teacherEdit->phone) : old('phone') }}" placeholder="Phone..." required>
+
+                                                <label for="image" class="form-label">Image</label>
+                                                @if(isset($teacherEdit) && $teacherEdit->image)
+                                                    <div class="mb-3">
+                                                        <img src="{{ asset('images/' . $teacherEdit->image) }}" alt="Current Image" style="max-width: 150px;">
+                                                    </div>
+                                                @endif
+                                                <input type="file" class="form-control" id="image" name="image" {{ isset($teacherEdit) ? '' : 'required' }}>
                                             </div>
-                                            <button type="submit" class="btn btn-primary float-end">
+                                            <button type="submit" class="btn btn-primary mx-2 float-end">
                                                 {{isset($teacherEdit->id)? "Update" : "Submit"}}
                                             </button>
+                                            <a href="{{route('teachers')}}" class="btn btn-primary  float-end">Back to list</a>
                                         </form>
                                     </p>
                                 </div>

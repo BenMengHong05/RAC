@@ -11,8 +11,8 @@
                     <div class="container-xxl flex-grow-1 container-p-y">
                         <div class="row g-4 mb-5">
                             <div class="col-lg-12">
+                                <h3>{{isset($studentEdit->id) ? "Update Student MIT " : "Add Student MIT"}}</h3>
                                 <div class="card h-100 p-4">
-                                    <h3>{{isset($studentEdit->id) ? "Update Student MIT " : "Add Student MIT"}}</h3>
                                     <p class="card-text">
                                         <form action="{{ isset($studentEdit) && $studentEdit->id ? route('student_update', $studentEdit->id) : route('student_store') }}" method="POST" enctype="multipart/form-data">
                                             @csrf
@@ -20,22 +20,11 @@
                                                 @method('PUT')
                                             @endif
                                             <div class="mb-3">
-                                                <label for="image" class="form-label">Image</label>
-
-                                                @if(isset($studentEdit) && $studentEdit->image)
-                                                    <!-- Display the current image if it exists -->
-                                                    <div class="mb-3">
-                                                        <img src="{{ asset('images/' . $studentEdit->image) }}" alt="Current Image" style="max-width: 150px;">
-                                                    </div>
-                                                @endif
-
-                                                <!-- File input for uploading a new image -->
-                                                <input type="file" class="form-control" id="image" name="image" {{ isset($studentEdit) ? '' : 'required' }}>
-
                                                 <label for="name" class="form-label">Name</label>
                                                 <input type="text" class="form-control" value="{{isset($studentEdit)&& $studentEdit->id ? old('name' , $studentEdit->name): ''}}" id="name" name="name" required>
+
                                                 <label for="sex" class="form-label">Sex</label>
-                                                <select name="sex" style="cursor: pointer" id="sex" class="form-control" required>
+                                                <select name="sex"  style="cursor: pointer" id="sex" class="form-control" required>
                                                     <option value="M" {{ (isset($studentEdit) && $studentEdit->sex == 'M') ? 'selected' : '' }}>M</option>
                                                     <option value="F" {{ (isset($studentEdit) && $studentEdit->sex == 'F') ? 'selected' : '' }}>F</option>
                                                 </select>
@@ -51,13 +40,18 @@
                                                 <label for="phone" class="form-label">Phone</label>
                                                 <input type="text" name="phone" id="phone" class="form-control"value="{{ isset($studentEdit) && $studentEdit->id ? old('phone', $studentEdit->phone) : old('phone') }}" placeholder="Phone..." required>
 
-                                               
-
-
+                                                <label for="image" class="form-label">Image</label>
+                                                @if(isset($studentEdit) && $studentEdit->image)
+                                                    <div class="mb-3">
+                                                        <img src="{{ asset('images/' . $studentEdit->image) }}" alt="Current Image" style="max-width: 150px;">
+                                                    </div>
+                                                @endif
+                                                <input type="file" class="form-control" id="image" name="image" {{ isset($studentEdit) ? '' : 'required' }}>
                                             </div>
-                                            <button type="submit" class="btn btn-primary float-end">
+                                            <button type="submit" class="btn btn-primary mx-2 float-end">
                                                 {{isset($studentEdit->id)? "Update" : "Submit"}}
                                             </button>
+                                            <a href="{{route('students')}}" class="btn btn-primary  float-end">Back to list</a>
                                         </form>
                                     </p>
                                 </div>

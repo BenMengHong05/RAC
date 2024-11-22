@@ -11,8 +11,8 @@
                     <div class="container-xxl flex-grow-1 container-p-y">
                         <div class="row g-4 mb-5">
                             <div class="col-lg-12">
+                                <h3>{{isset($newmitEdit->id) ? "Update newmit MIT " : "Add newmit MIT"}}</h3>
                                 <div class="card h-100 p-4">
-                                    <h3>{{isset($newmitEdit->id) ? "Update newmit MIT " : "Add newmit MIT"}}</h3>
                                     <div class="card-text">
                                         <form action="{{ isset($newmitEdit) && $newmitEdit->id ? route('newmit_update', $newmitEdit->id) : route('newmit_store') }}" method="POST" enctype="multipart/form-data">
                                             @csrf
@@ -31,47 +31,40 @@
                                             @endif
 
                                             <div class="mb-3">
-                                                <!-- Image upload and display -->
-                                                <label for="image" class="form-label">Image</label>
-
-                                                @if (isset($newmitEdit) && $newmitEdit->image)
-                                                    <!-- Show the current image if editing an existing item -->
-                                                    <div class="mb-3">
-                                                        <img src="{{ asset('images/' . $newmitEdit->image) }}" alt="Current Image" style="max-width: 150px;">
-                                                    </div>
-                                                @endif
-
-                                                <!-- File input for a new image -->
-                                                <input type="file" class="form-control" id="image" name="image" {{ isset($newmitEdit) ? '' : 'required' }}>
-                                            </div>
-
-                                            <!-- Title input -->
-                                            <div class="mb-3">
                                                 <label for="title" class="form-label">Title</label>
                                                 <input type="text" class="form-control" id="title" name="title" value="{{ isset($newmitEdit) ? old('title', $newmitEdit->title) : old('title') }}" required>
                                             </div>
 
-                                            <!-- Description input -->
                                             <div class="mb-3">
                                                 <label for="description" class="form-label">Description</label>
                                                 <input type="text" name="description" id="description" class="form-control" value="{{ isset($newmitEdit) ? old('description', $newmitEdit->description) : old('description') }}" required>
                                             </div>
-                                            {{-- <div class="mb-3">
-                                                <label for="categories" class="form-label">Categories</label>
-                                                <select name="" class="form-control" id="">
-                                                    @foreach ($categorieproducts as $index => $items)
-                                                        <option value="1">{{$items->name}}</option>
+                                            <div class="mb-3">
+                                                <label for="categorie_id" class="form-label">Select categorie</label>
+                                                <select name="categorie_id" id="categorie_id" class="form-control" required>
+                                                    @foreach ($categories as $categorie)
+                                                        <option value="{{ $categorie->id }}"
+                                                                {{ (isset($newmitEdit) && $newmitEdit->categorie_id == $categorie->id) ? 'selected' : '' }}>
+                                                            {{ $categorie->name }}
+                                                        </option>
                                                     @endforeach
                                                 </select>
-                                            </div> --}}
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="image" class="form-label">Image</label>
+                                                @if (isset($newmitEdit) && $newmitEdit->image)
+                                                    <div class="mb-3">
+                                                        <img src="{{ asset('images/' . $newmitEdit->image) }}" alt="Current Image" style="max-width: 150px;">
+                                                    </div>
+                                                @endif
+                                                <input type="file" class="form-control" id="image" name="image" {{ isset($newmitEdit) ? '' : 'required' }}>
+                                            </div>
 
 
-
-                                            <!-- Category selection -->
-                                            <!-- Submit button -->
-                                            <button type="submit" class="btn btn-primary float-end">
+                                            <button type="submit" class="btn btn-primary mx-2 float-end">
                                                 {{ isset($newmitEdit->id) ? 'Update' : 'Submit' }}
                                             </button>
+                                            <a href="{{route('newmits')}}" class="btn btn-primary  float-end">Back to list</a>
                                         </form>
 
                                     </div>

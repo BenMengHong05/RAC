@@ -13,20 +13,21 @@
         <div class="container mt-5">
             <div class="row ">
                 <h1>
-                   {{$campuslifes->title}}
+                    {{ $campuslifes->title }}
                 </h1>
             </div>
         </div>
         <div class="container mt-5">
             <div class="row mt-2">
-                <div class="col-lg-6 education-text">
+                <div class="col-xl-6 education-text">
                     <h5>
-                        {{$campuslifes->description}}
+                        {{ $campuslifes->description }}
                     </h5>
                 </div>
-                <div class="col-lg-6 education-img" style="min-height: 40vh">
+                <div class="col-xl-6 education-img" style="min-height: 40vh">
                     <div class="ed-img">
-                        <img src="{{ asset('images/' . $campuslifes->image) }}" alt="Education Image" style="width: 60vh; height: 40vh;">
+                        <img src="{{ asset('images/' . $campuslifes->image) }}" alt="Education Image" class="img-fluid"
+                            style="width: 70vh; height: 50vh;">
                     </div>
                 </div>
             </div>
@@ -37,12 +38,14 @@
         <div class="row">
             <div class="col-lg-6  ">
                 <h5>
-                    With 500+ student organizations <span class="ul-hover-4">(chocolate science, anyone?),</span> nearly 40 Greek-letter and independent
+                    With 500+ student organizations <span class="ul-hover-4">(chocolate science, anyone?),</span> nearly
+                    40 Greek-letter and independent
                     living groups, chaplains for more than 20 faith traditions, and a commitment to diversity and
                     inclusion, student life at MIT offers a welcoming place for everyone. To complement their academics
                     and research, students choose their own extracurricular adventures, from a spectacular array of ways
                     to participate in music, dance, and sports to dozens of groups that savor and celebrate cultures
-                    from around the world. To help <span class="ul-hover-4">students navigate</span>challenges, MIT offers a strong support network
+                    from around the world. To help <span class="ul-hover-4">students navigate</span>challenges, MIT
+                    offers a strong support network
                     (bolstered by occasional visits from puppies, pigs, and pygmy goats).
                 </h5>
                 <div class="campuslife-menu mt-4">
@@ -58,7 +61,7 @@
             </div>
             <div class="col-lg-6  ">
                 <div class="img3  d-flex flex-column align-items-center justify-content-end">
-                    <img src="{{ asset('images/section1.jpg') }}" alt="" width="70%" class="" >
+                    <img src="{{ url('images/section1.jpg') }}" alt="" width="70%" class="">
                     <p class="mt-3">Tim the Beaver is MIT’s mascot.</p>
                 </div>
             </div>
@@ -69,11 +72,13 @@
         <div class="row mt-2">
             <div class="col-lg-6">
                 <h5>
-                    Our residence halls are part entertainment center, part brain trust, part <span class="ul-hover-4">support system</span>,
+                    Our residence halls are part entertainment center, part brain trust, part <span
+                        class="ul-hover-4">support system</span>,
                     and wholly central to students’ MIT experience. Campus residences have distinct
                     personalities and traditions (like a cross-campus water fight or the Baker House piano
                     drop), which contribute as much to our students’ growth as their academic experiences do.
-                    Dining at MIT is about choice and <span class="ul-hover-4">flexibility</span>, with six dining halls, nearly a dozen retail
+                    Dining at MIT is about choice and <span class="ul-hover-4">flexibility</span>, with six dining
+                    halls, nearly a dozen retail
                     eateries, vending hubs, and a variety of meal plan options.
                 </h5>
                 <div class="campuslife-menu mt-4">
@@ -88,7 +93,7 @@
             </div>
             <div class="col-lg-6  ">
                 <div class="img3  d-flex flex-column align-items-center justify-content-center">
-                    <img src="{{ asset('images/section2.jpg') }}" alt="" width="70%" class="" >
+                    <img src="{{ url('images/section2.jpg') }}" alt="" width="70%" class="">
                     <p class="mt-3">Maseeh Hall is a coed residence for undergraduate students.</p>
                 </div>
             </div>
@@ -122,13 +127,14 @@
             <div class="col-lg-6  ">
                 <div class="campuslife d-flex  justify-content-center gap-5 ">
                     <div class="col-lg-3 " style="width: 29vh;">
-                        <img src="{{ asset('images/section3.jpg') }}" class="figure-img img-fluid "  alt="" style="width: 29vh;height: 40%;">
+                        <img src="{{ url('images/section3.jpg') }}" class="figure-img img-fluid " alt=""
+                            style="width: 29vh;height: 40%;">
                         <p class="mt-3"><span>a.</span>Players on the women’s tennisteam celebrate a win.</p>
                         <p><span>a.</span>The MIT Shotokan KarateClub in competition.</p>
-                            the cello.</p>
+                        the cello.</p>
                     </div>
-                    <div class="col-lg-3 " style="width: 20vh" >
-                        <img src="{{ asset('images/section3.1.jpg')}} " class="figure-img img-fluid "  alt="" >
+                    <div class="col-lg-3 " style="width: 20vh">
+                        <img src="{{ url('images/section3.1.jpg') }} " class="figure-img img-fluid " alt="">
                     </div>
                 </div>
             </div>
@@ -160,13 +166,14 @@
             <div class="col-lg-6  ">
                 <div class="campuslife d-flex  justify-content-center gap-5 ">
                     <div class="col-lg-3 " style="width: 29vh;">
-                        <img src="{{ asset('images/section4.jpg') }}" class="figure-img img-fluid "  alt="" style="width: 29vh;height: 40%;">
+                        <img src="{{ url('images/section4.jpg') }}" class="figure-img img-fluid " alt=""
+                            style="width: 29vh;height: 40%;">
                         <p class="mt-3"><span>a.</span>A student presents his work in an architecture critique.</p>
                         <p><span>a.</span>A responsive environment developed at MIT reacts as a visiting artist plays
                             the cello.</p>
                     </div>
-                    <div class="col-lg-3 " style="width: 20vh" >
-                        <img src="{{ asset('images/section4.1.jpg')}} " class="figure-img img-fluid "  alt="" >
+                    <div class="col-lg-3 " style="width: 20vh">
+                        <img src="{{ url('images/section4.1.jpg') }} " class="figure-img img-fluid " alt="">
                     </div>
                 </div>
             </div>
@@ -197,7 +204,7 @@
             </div>
             <div class="col-lg-6  ">
                 <div class="img3  d-flex flex-column align-items-center justify-content-end">
-                    <img src="{{ asset('images/section5.jpg') }}" alt="" width="70%" class="" >
+                    <img src="{{ url('images/section5.jpg') }}" alt="" width="70%" class="">
                     <p class="mt-4">The MIT Gospel Choir performs at the MLK luncheon.</p>
                 </div>
             </div>
@@ -234,77 +241,89 @@
             <div class="col-lg-6  ">
                 <div class="campuslife d-flex  justify-content-center gap-5 ">
                     <div class="col-lg-3 " style="width: 29vh;">
-                        <img src="{{ asset('images/section6.jpg') }}" class="figure-img img-fluid "  alt="" style="width: 29vh;height: 40%;">
-                        <p class="mt-3"><span>a.</span>MIT Health offers numerous classes through Community Wellness.</p>
+                        <img src="{{ url('images/section6.jpg') }}" class="figure-img img-fluid " alt=""
+                            style="width: 29vh;height: 40%;">
+                        <p class="mt-3"><span>a.</span>MIT Health offers numerous classes through Community Wellness.
+                        </p>
                         <p><span>a.</span>Students relieve stress by cuddling with canines from the Puppy Lab.</p>
                     </div>
-                    <div class="col-lg-3 " style="width: 20vh" >
-                        <img src="{{ asset('images/section6.1.jpg')}} " class="figure-img img-fluid "  alt="" >
+                    <div class="col-lg-3 " style="width: 20vh">
+                        <img src="{{ url('images/section6.1.jpg') }} " class="figure-img img-fluid " alt="">
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<section class="container education-imgae mt-5  position-relative d-flex flex-column justify-content-center">
-    <div class="row">
-        <div class="col-lg-6">
-            <div class="row">
-                <div class="col-lg-12">
-                    <figure>
-                        <img style="height: 50vh;object-fit:cover" src="{{asset('images/CampusLife1.jpeg')}}" class="img-fluid img" alt="">
-                    </figure>
+<section class="container-fluid m-0 p-0  py-5  education-imgae mt-5 " >
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <figure>
+                            <img style="height: 50vh;object-fit:cover" src="{{ url('images/CampusLife1.jpeg') }}"
+                                class="img-fluid img" alt="">
+                        </figure>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <figure>
+                            <img style="width: 100%;height: 30vh;object-fit:cover"
+                                src="{{ url('images/CampusLife2.jpeg') }}" class="img-fluid img" alt="">
+                        </figure>
+                    </div>
+                    <div class="col-lg-6">
+                        <figure>
+                            <img style="width: 100%;height: 30vh;object-fit:cover"
+                                src="{{ url('images/CampusLife3.jpeg') }}" class="img-fluid img" alt="">
+                        </figure>
+                    </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-6">
-                    <figure>
-                        <img style="width: 100%;height: 30vh;object-fit:cover" src="{{asset('images/CampusLife2.jpeg')}}" class="img-fluid img" alt="">
-                    </figure>
+            <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <figure>
+                            <img style="width: 100%;height: 30vh;object-fit:cover"
+                                src="{{ url('images/CampusLife4.jpeg') }}" class="img-fluid img" alt="">
+                        </figure>
+                    </div>
+                    <div class="col-lg-6">
+                        <figure>
+                            <img style="width: 100%;height: 30vh;object-fit:cover"
+                                src="{{ url('images/CampusLife5.jpeg') }}" class="img-fluid img" alt="">
+                        </figure>
+                    </div>
                 </div>
-                <div class="col-lg-6">
-                    <figure>
-                        <img style="width: 100%;height: 30vh;object-fit:cover" src="{{asset('images/CampusLife3.jpeg')}}" class="img-fluid img" alt="">
-                    </figure>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <img style="height: 50vh;object-fit:cover" src="{{ url('images/CampusLife6.jpeg') }}"
+                            class="img-fluid img" alt="">
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-lg-6">
-            <div class="row">
-                <div class="col-lg-6">
-                    <figure>
-                        <img style="width: 100%;height: 30vh;object-fit:cover" src="{{asset('images/CampusLife4.jpeg')}}" class="img-fluid img" alt="">
-                    </figure>
-                </div>
-                <div class="col-lg-6">
-                    <figure>
-                        <img style="width: 100%;height: 30vh;object-fit:cover" src="{{asset('images/CampusLife5.jpeg')}}" class="img-fluid img" alt="">
-                    </figure>
-                </div>
+        <div class="row mt-2">
+            <div class="col-lg-3">
+                <figure>
+                    <img style="width: 100%;height: 30vh;object-fit:cover" src="{{ url('images/CampusLife7.jpeg') }}"
+                        class="img-fluid img" alt="">
+                </figure>
             </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <img style="height: 50vh;object-fit:cover" src="{{asset('images/CampusLife6.jpeg')}}" class="img-fluid img" alt="">
-                </div>
+            <div class="col-lg-3">
+                <figure>
+                    <img style="width: 100%;height: 30vh;object-fit:cover"
+                        src="{{ url('images/CampusLife8.jpeg..jpg') }}" class="img-fluid img" alt="">
+                </figure>
             </div>
-        </div>
-    </div>
-    <div class="row mt-2">
-        <div class="col-lg-3">
-            <figure>
-                <img style="width: 100%;height: 30vh;object-fit:cover" src="{{asset('images/CampusLife7.jpeg')}}" class="img-fluid img" alt="">
-            </figure>
-
-        </div>
-        <div class="col-lg-3">
-            <figure>
-                <img style="width: 100%;height: 30vh;object-fit:cover" src="{{asset('images/CampusLife8.jpeg..jpg')}}" class="img-fluid img" alt="">
-            </figure>
-        </div>
-        <div class="col-lg-3">
-            <figure>
-                <img style="width: 100%;height: 30vh;object-fit:cover" src="{{asset('images/CampusLife9.jpeg..jpg')}}" class="img-fluid img" alt="">
-            </figure>
+            <div class="col-lg-3">
+                <figure>
+                    <img style="width: 100%;height: 30vh;object-fit:cover"
+                        src="{{ url('images/CampusLife9.jpeg..jpg') }}" class="img-fluid img" alt="">
+                </figure>
+            </div>
         </div>
     </div>
 </section>

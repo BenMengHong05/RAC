@@ -9,7 +9,11 @@ class Information_NewController extends Controller
 {
     //
     public function index(){
-        $objNewmit =NewMit::orderby('id', 'asc')->get();
-        return view('news.index', compact('objNewmit'));
+        $objNewmits =NewMit::where('categorie_id','9')->orderby('id', 'desc')->get();
+        $TodaysFeaturedNews = NewMit::where('categorie_id','10')->orderby('id', 'desc')->get();
+        $RecentHighlights  = NewMit::where('categorie_id','11')->orderby('id', 'desc')->get();
+        $CommunityUpdates  = NewMit::where('categorie_id','12')->orderby('id', 'desc')->get();
+        $MoreNews   = NewMit::where('categorie_id','14')->orderby('id', 'desc')->get();
+        return view('news.index', compact('objNewmits','TodaysFeaturedNews','RecentHighlights','CommunityUpdates','MoreNews'));
     }
 }

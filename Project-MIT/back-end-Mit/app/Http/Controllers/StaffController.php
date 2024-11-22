@@ -48,7 +48,7 @@ class StaffController extends Controller
         $staff = Staff::find($id);
 
         if (!$staff) {
-            return redirect()->route('teachers')->with('error', 'Teacher not found.');
+            return redirect()->route('teachers')->with('delete', 'Staff added successfully!');
         }
 
         // Remove the teacher's image from the storage
@@ -60,7 +60,7 @@ class StaffController extends Controller
         // Delete the teacher record from the database
         $staff->delete();
 
-        return redirect()->route('staffs')->with('delete', 'Teacher deleted successfully.');
+        return redirect()->route('staffs')->with('delete', 'staff deleted successfully.');
     }
 
     public function edit($id){
