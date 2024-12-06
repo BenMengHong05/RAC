@@ -45,6 +45,7 @@
                                                     <img src="{{ asset('images/' . $educationEdit->image) }}" alt="Current Image" style="max-width: 150px;">
                                                 </div>
                                             @endif
+                                            <label for="description" class="form-label">Image</label>
                                             <input type="file" class="form-control" id="image" name="image" {{ isset($educationEdit) ? '' : 'required' }}>
                                             </div>
 

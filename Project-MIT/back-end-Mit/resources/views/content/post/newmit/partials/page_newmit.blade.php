@@ -50,7 +50,6 @@
                         <tr>
                             <th>No</th>
                             <th>Img</th>
-                            <th>Categorie_name</th>
                             <th>Title</th>
                             <th>description</th>
                             <th>Actions</th>
@@ -68,7 +67,6 @@
                                     <td>{{ $index + 1 }}</td>
                                     <td><img src="{{ asset('images/' . $newmit->image) }}" alt=""
                                             style="width: 10vh;height: 10vh"></td>
-                                    <td>{{ $newmit->categorie->name}}</td>
                                     <td>{{ $newmit->title }}</td>
                                     <td>{{ $newmit->description }}</td>
                                     <td>

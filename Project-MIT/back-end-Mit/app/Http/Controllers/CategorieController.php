@@ -25,11 +25,22 @@ class categorieController extends Controller
     {
         $request->validate([
             'name' => 'required',
+            'title' => 'required',
+            'description' => 'required',
+            'image' => 'image|mimes:png,jpg,jpeg,gif|max:2048',
         ]);
 
         // Create new category
         $categorie = new Categorie();
         $categorie->name = $request->input('name');
+        $categorie->title = $request->input('title');
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $imageName = time() . '.' . $image->getClientOriginalExtension();
+            $image->move(public_path('images'), $imageName);
+            $categorie->image = $imageName;
+        }
+        $categorie->description = $request->input('description');
         $categorie->save();
 
         return redirect()->route('categories')->with('success', 'Category added successfully.');
@@ -67,10 +78,21 @@ class categorieController extends Controller
     {
         $request->validate([
             'name' => 'required',
+            'title' => 'required',
+            'description' => 'required',
+            'image' => 'image|mimes:png,jpg,jpeg,gif|max:2048',
         ]);
 
         $categorie = Categorie::findOrFail($id);
         $categorie->name = $request->input('name');
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $imageName = time() . '.' . $image->getClientOriginalExtension();
+            $image->move(public_path('images'), $imageName);
+            $categorie->image = $imageName;
+        }
+        $categorie->title = $request->input('title');
+        $categorie->description = $request->input('description');
         $categorie->save();
 
         return redirect()->route('categories')->with('success', 'Category updated successfully!');

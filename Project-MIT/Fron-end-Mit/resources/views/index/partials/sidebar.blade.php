@@ -1,4 +1,4 @@
-<div class="sider-box">
+<div class="sider-box" >
     <div class="sider-search" >
         <div class="menu">
             {{-- menu --}}
@@ -10,35 +10,35 @@
             aria-label="Search..."  style="padding-left: 4rem ;background-color: rgba(51, 50, 50, 0.1)" />
         </div>
     </div>
-    <div class="sider-menu mt-4 " id="mySearch">
+    <div class="sider-menu mt-4 "  >
         <div class="menu-a">
             <a href="/error">error</a>
             <h6 class="ms-4" style="font-weight: bold">Top resources for</h6>
-            <ul class="d-flex flex-column align-items-start justify-content-start ">
-                <li><a href="" class="d-flex align-items-center gap-1">
+            <ul class="d-flex flex-column align-items-start justify-content-start " style="font-size: 0.9rem">
+                <li><a href="" class="d-flex align-items-center gap-1 category-descrition">
                         <div class="trel"></div>prospective students
                     </a></li>
-                <li><a href="" class="d-flex align-items-center gap-1">
+                <li><a href="" class="d-flex align-items-center gap-1 category-descrition">
                         <div class="trel"></div>current students
                     </a></li>
-                <li><a href="" class="d-flex align-items-center gap-1">
+                <li><a href="" class="d-flex align-items-center gap-1 category-descrition">
                         <div class="trel"></div>faculty & staff
                     </a></li>
-                <li><a href="" class="d-flex align-items-center gap-1">
+                <li><a href="" class="d-flex align-items-center gap-1 category-descrition">
                         <div class="trel"></div>alumni
                     </a></li>
-                <li><a href="" class="d-flex align-items-center gap-1">
+                <li><a href="" class="d-flex align-items-center gap-1 category-descrition">
                         <div class="trel"></div>parents & families
                     </a></li>
-                <li><a href="" class="d-flex align-items-center gap-1">
+                <li><a href="" class="d-flex align-items-center gap-1 category-descrition">
                         <div class="trel"></div>all resources
                     </a></li>
             </ul>
         </div>
         <div class="menu-b mt-2">
-            <h6 class="ms-4" style="font-family: sans-serif;font-weight: 600">Featured topic</h6>
+            <h6 class="ms-4" style="font-weight: 600">Featured topic</h6>
             <ul class="d-flex  gap-2 align-items-start justify-content-start ">
-                <li class="d-flex align-items-center gap-3 "><a href="" class="d-flex align-items-center gap-1">
+                <li class="d-flex align-items-center gap-3 "><a href="" class="d-flex align-items-center gap-1 category-descrition"  style="font-size: 0.9rem">
                         <div class="trel"></div> climate change
                     </a> </li>
                     <a href="" class=" px-2"  style="border-radius: 50%;background-color: rgb(29, 215, 29);cursor: pointer;" >

@@ -425,6 +425,17 @@ div .menubar button{
         font-size: .9rem;
     }
 }
+.archive span{
+    border-bottom: 1px solid red;
+    cursor: pointer;
+}
+.archive span:hover{
+    color: red;
+}
+.title-all-category span{
+    border-top: 4px solid red;
+}
+
 /*-----------------------------------------------Enducation ----------------------------------------------*/
 .education-footer{
     background-color: rgb(232, 227, 237);
@@ -439,6 +450,29 @@ div .menubar button{
 }
 .education-footer li a:hover{
     color: red;
+}
+@media screen and (max-width:1300px) {
+    .footer-menu-item{
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+@media screen and (max-width:2000px) {
+   .footer-menu-2{
+        display: flex;
+        justify-content: start;
+   }
+   .education-footer-content-description{
+        display: flex;
+        justify-content: center;
+    }
+}
+@media screen and (max-width:991px) {
+    .education-footer-content-description{
+        display: flex;
+        justify-content: start;
+    }
 }
 
 .ul-enducation-footer ul li a{
@@ -525,7 +559,6 @@ li{
     color: red;
 }
 /*---------------------------------------------------------------- educartion  --------------------------------------*/
-
 .img {
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
@@ -539,3 +572,4 @@ li{
     background-color: red;
     height: 1px;
 }
+

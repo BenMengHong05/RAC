@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Categorie;
-use App\Models\Newmit_Categorie;
 use App\Models\NewMit;
 use Illuminate\Http\Request;
 
@@ -12,19 +10,16 @@ class NewMitController extends Controller
     //
     public function index()
     {
-        // $newmits = NewMit::all();
-        $categories = Categorie::with('newmit')->get();
-        $newmits = NewMit::with('categorie')->get();
 
-        return view('content.post.newmit.index', compact('newmits','categories'));
+        $newmits = NewMit::all();
+        // dd($newmits);
+        return view('content.post.newmit.index', compact('newmits'));
     }
 
     // Show the form to create a new newmit
     public function create()
     {
-        $categories = Categorie::with('newmit')->get();
-        $newmits = NewMit::with('categorie')->get();
-        return view('content.post.newmit.add_or_edit_newmit',compact("categories","newmits"));
+        return view('content.post.newmit.add_or_edit_newmit');
     }
 
     // Store a new newmit
@@ -34,8 +29,6 @@ class NewMitController extends Controller
         'image' => 'image|mimes:png,jpg,jpeg,gif|max:2048',
         'title' => 'required',
         'description' => 'required',
-        'categorie_id' => 'required',
-
     ]);
     if ($request->hasFile('image')) {
         try {
@@ -52,8 +45,6 @@ class NewMitController extends Controller
     $newmit->image = $imageName;
     $newmit->title = $request->input('title');
     $newmit->description = $request->input('description');
-    $newmit->categorie_id = $request->input('categorie_id');
-
     $newmit->save();
     return redirect()->route('newmits')->with('success', 'You added the newmit successfully.');
 }
@@ -77,16 +68,14 @@ public function delete($id)
     return redirect()->route('newmits')->with('delete', 'newmit deleted successfully.');
 }
 public function edit($id){
-    $categories = Categorie::with('newmit')->get();
     $newmitEdit = NewMit::Find($id);
-    return view('content.post.newmit.add_or_edit_newmit', compact('newmitEdit','categories'));
+    return view('content.post.newmit.add_or_edit_newmit', compact('newmitEdit'));
 }
 public function update(Request $request , $id){
     $request->validate([
         'image' => 'image|mimes:png,jpg,jpeg,gif|max:2048',
         'title' => 'required',
         'description' => 'required',
-        'categorie_id' => 'required',
     ]);
 
     $newmit = NewMit::Find($id);
@@ -95,7 +84,6 @@ public function update(Request $request , $id){
     }
     $newmit->title = $request->input('title');
     $newmit->description = $request->input('description');
-    $newmit->categorie_id = $request->input('categorie_id');
     if ($request->hasFile('image')) {
         $imageName = time(). '.'. $request->file('image')->getClientOriginalExtension();
         $request->file('image')->move(public_path('images'), $imageName);

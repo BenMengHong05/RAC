@@ -10,6 +10,7 @@ use App\Http\Controllers\PostController;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategorieController;
+use App\Http\Controllers\Categories_Path_Controller;
 use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DashboardController;
@@ -178,9 +179,18 @@ Route::middleware("auth")->group(function() {
     Route::put("/user/{id}", [UserController::class, "update"])->name("user_update");
     Route::get('/user/search', [UserController::class, 'search'])->name('user_search');
 
-    // Route::get("/error", function(){
-    //     return view('page.index_error');
-    // });
+    Route::get('/categorie_paths', [Categories_Path_Controller::class, 'index'])->name('categorie_paths');
+    Route::get("/categorie_path_create" , [Categories_Path_Controller::class, "create"])->name("categorie_path_create");
+    Route::post("/categorie_path_store", [Categories_Path_Controller::class, "store"])->name("categorie_path_store");
+    Route::get("/categorie_paths_show/{id}", [Categories_Path_Controller::class, "show"])->name("categorie_paths_show");
+    Route::delete("/categorie_path/delete/{id}", [Categories_Path_Controller::class, "delete"])->name("categorie_path_delete");
+    Route::get("/categorie_path_delete/{id}/edit", [Categories_Path_Controller::class, "edit"])->name("categorie_path_edit");
+    Route::put("/categorie-paths/{id}", [Categories_Path_Controller::class, "update"])->name("categorie_path_update");
+    Route::get('/categorie_path/search', [Categories_Path_Controller::class, 'search'])->name('categorie_path_search');
+
+     Route::get("/error", function(){
+         return view('page.index_error');
+     });
 });
 
 

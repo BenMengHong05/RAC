@@ -12,4 +12,15 @@ class Categorie extends Model
     public function newmits(){
         return $this->hasMany(NewMit::class, 'categorie_id');
     }
+    public function educations(){
+        return $this->hasMany(Education::class, 'categorie_id');
+    }
+    public function research(){
+        return $this->hasMany(Research::class, 'categorie_id');
+    }
+
+    public function category_paths(){
+        return $this->hasMany(CategoryPath::class, 'categorie_id');
+    }
+
 }

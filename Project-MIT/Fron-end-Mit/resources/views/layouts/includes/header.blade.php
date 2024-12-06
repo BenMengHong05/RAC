@@ -18,7 +18,6 @@
     <link rel="stylesheet" href="{{url('css/MIT.css')}}">
     @stack('css')
     <!-- jQuery -->
-    
 </head>
 <body>
 @include('layouts.partials.nav')

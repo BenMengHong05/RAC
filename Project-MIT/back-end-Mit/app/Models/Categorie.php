@@ -9,7 +9,12 @@ class Categorie extends Model
 {
     use HasFactory;
     protected $table = 'categories';
-    public function newmit(){
+    public function newmits(){
         return $this->hasMany(NewMit::class,'categorie_id');
     }
+    public function categories_path()
+    {
+        return $this->hasMany(Categorie_Path::class, 'categorie_id');
+    }
+
 }

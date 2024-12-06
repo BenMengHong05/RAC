@@ -35,6 +35,19 @@
                                             <input type="text" class="form-control"
                                                 value="{{ isset($categorieEdit) && $categorieEdit->id ? old('name', $categorieEdit->name) : '' }}"
                                                 id="name" name="name" required>
+                                            <label for="title" class="form-label">title</label>
+                                            <input type="text" class="form-control" value="{{ isset($categorieEdit) && $categorieEdit->id ? old('title', $categorieEdit->title) : '' }}"
+                                            id="title" name="title" >
+                                            <label for="title" class="form-label">description</label>
+                                            <input type="text" class="form-control" value="{{ isset($categorieEdit) && $categorieEdit->id ? old('description', $categorieEdit->description) : '' }}"
+                                            id="description" name="description" >
+                                            <label for="title" class="form-label">image</label>
+                                            @if(isset($categorieEdit) && $categorieEdit->image)
+                                                <div class="mb-3">
+                                                    <img src="{{ asset('images/' . $categorieEdit->image) }}" alt="Current Image" style="max-width: 150px;">
+                                                </div>
+                                            @endif
+                                            <input type="file"  class="form-control" id="image" name="image" {{ isset($categorieEdit) ? '' : '' }}>
                                         </div>
                                         <button type="submit" class="btn btn-primary mx-2 float-end">
                                             {{ isset($categorieEdit->id) ? 'Update' : 'Submit' }}

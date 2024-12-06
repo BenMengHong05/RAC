@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-lg-12 " style="margin-top: 25vh;font-family: sans-serif">
-                <ul class="d-flex gap-2">
+                <ul class="d-flex  ps-3  gap-2">
                     <li><a href="" class="text-black">Home</a></li>
                     <li style="color: red">/</li>
                     <li>About MIT</li>
@@ -12,9 +12,9 @@
         </div>
         <div class="container mt-5">
             <div class="row ">
-                <h1>
+                <h2>
                     {{$objAboutMits->title}}
-                </h1>
+                </h2>
             </div>
         </div>
         <div class="container mt-5">
@@ -43,7 +43,7 @@
         </div>
     </div>
     <div class="container mt-5 " style="border-top: 1px solid rgb(82, 78, 78);width: 100%; height: 100%;">
-        <h1 class="mt-4">Arts</h1>
+        <h2 class="mt-4">Arts</h2>
         <div class="row mt-2">
             <div class="col-lg-6">
                 <div class="campuslife-menu mt-4">
@@ -107,7 +107,7 @@
         </div>
     </div>
     <div class="container mt-5 " style="border-top: 1px solid rgb(82, 78, 78); width: 100%;height: 100%;" >
-        <h1 class="mt-4">Community (as of 10/30/23)</h1>
+        <h2 class="mt-4">Community (as of 20/30/23)</h2>
         <div class="row mt-2">
             <div class="col-lg-6">
                 <div class="campuslife-menu mt-4">
@@ -145,10 +145,10 @@
         </div>
     </div>
     <div class="container mt-5 " style="border-top: 1px solid rgb(82, 78, 78); width: 100%;height: 100%;" >
-        <h1 class="mt-4">Faculty</h1>
+        <h2 class="mt-4">Faculty</h2>
         <div class="row mt-2">
             <div class="col-lg-6">
-                <h4>For MIT’s faculty — just over 1,000 in number — cutting-edge research and education are inseparable. Each feeds the other. When they’re not busy pioneering the frontiers of their fields, MIT faculty members play a vital role in shaping the Institute’s vibrant campus community — as advisors, coaches, heads of houses, mentors, committee members, and much more.</h4>
+                <h5>For MIT’s faculty — just over 1,000 in number — cutting-edge research and education are inseparable. Each feeds the other. When they’re not busy pioneering the frontiers of their fields, MIT faculty members play a vital role in shaping the Institute’s vibrant campus community — as advisors, coaches, heads of houses, mentors, committee members, and much more.</h5>
                 <div class="campuslife-menu mt-4">
                     <h5>Top Resources</h5>
                     <ul class="education-ul">
@@ -175,21 +175,21 @@
         </div>
     </div>
     <div class="container mt-5 " style="border-top: 1px solid rgb(82, 78, 78); width: 100%;height: 100%;" >
-        <h1 class="mt-4">Leadership</h1>
+        <h2 class="mt-4">Leadership</h2>
         <div class="row mt-2">
             <div class="col-lg-6">
-                <h4>
+                <h5>
                     <div>
-                        <h3>
+                        <h5>
                             President <br>
                             Sally Kornbluth
-                        </h3>
+                        </h5>
                         <p> MIT’s 18th president, January 2023 – present</p>
                     </div>
                     <div>
                         <p>The Institute’s board of trustees, known as “the Corporation,” includes 69 distinguished leaders in engineering, science, industry, education, and other professions.</p>
                     </div>
-                </h4>
+                </h5>
                 <div class="campuslife-menu mt-4">
                     <h5>Top Resources</h5>
                     <ul class="education-ul">
@@ -212,10 +212,10 @@
 </section>
 <section class=" education-imgae  d-flex flex-column align-items-center justify-content-center " style="width: 100%; min-height: 50vh">
     <div class="container mt-5 " style="border-top: 1px solid rgb(82, 78, 78); width: 100%;min-height: 60vh" >
-        <h1 class="mt-4">Cambridge & Boston</h1>
+        <h2 class="mt-4">Cambridge & Boston</h2>
         <div class="row mt-2">
             <div class="col-lg-6">
-                <h4>MIT is an integral part of its host city of Cambridge, a diverse and vibrant community noted for its intellectual life, history, and thriving innovation climate. With a campus nestled between Central and Kendall Squares, and across the Charles River from Boston’s Back Bay, the Institute is optimally positioned to collaborate with its neighbors and to contribute to its community.</h4>
+                <h5>MIT is an integral part of its host city of Cambridge, a diverse and vibrant community noted for its intellectual life, history, and thriving innovation climate. With a campus nestled between Central and Kendall Squares, and across the Charles River from Boston’s Back Bay, the Institute is optimally positioned to collaborate with its neighbors and to contribute to its community.</h5>
                 <div class="campuslife-menu mt-4">
                     <h5>Top Resources</h5>
                     <ul class="education-ul">

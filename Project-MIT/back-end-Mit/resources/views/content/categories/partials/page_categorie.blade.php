@@ -21,7 +21,7 @@
             </div>
         @endif
             <div class="car-header d-flex mt-3 align-items-center justify-content-between" style="min-height: 7vh">
-                <div class="add d-flex align-items-center gap-4 ms-4 " style="width: 60%">
+                <div class="add d-flex align-items-center~ gap-4 ms-4 " style="width: 60%">
                     <form action="{{ route('categorie_search') }}" method="GET" class="d-flex">
                         <input type="text" class="form-control " name="search" value="{{ request('search') }}"
                             id="search" placeholder="Search..." style="width: 100%">
@@ -45,6 +45,9 @@
                         <tr>
                             <th>No</th>
                             <th>name</th>
+                            <th>title</th>
+                            <th>description</th>
+                            <th>image</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -59,6 +62,9 @@
                                 <tr>
                                     <td>{{ $index + 1 }}</td>
                                     <td>{{ $categorie->name }}</td>
+                                    <td>{{ $categorie->title }}</td>
+                                    <td>{{ $categorie->description }}</td>
+                                    <td>{{ $categorie->image }}</td>
                                     <td>
                                         <div class="dropdown">
                                             <button type="button" class="btn p-0 dropdown-toggle hide-arrow"

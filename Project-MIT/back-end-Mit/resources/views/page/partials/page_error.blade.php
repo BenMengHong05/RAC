@@ -5,7 +5,7 @@
         font-family: "Edu AU VIC WA NT Pre", serif;
         font-size: 10rem;
         font-weight: bold;
-        color: #696cff
+        color: #696cff;
     }
     h2 {
         font-family: "Edu AU VIC WA NT Pre", serif;
@@ -15,6 +15,6 @@
     }
 </style>
 <div class="page-notfound d-flex align-items-center justify-content-center flex-column ">
-    <h1>404</h1>
-    <h2>Page is Not Found???</h2>
+    <img src="{{asset('image/Error-page.png')}}" class="img-error"  width="500">
+    <p>Page Is Not Found Plase Search Again</p>
 </div>

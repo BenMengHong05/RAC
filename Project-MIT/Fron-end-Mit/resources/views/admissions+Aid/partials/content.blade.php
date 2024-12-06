@@ -12,10 +12,10 @@
         </div>
         <div class="container mt-5">
             <div class="row ">
-                <h1>
+                <h2>
                     {{$admissions_aids->title}}
 
-                </h1>
+                </h2>
             </div>
         </div>
         <div class="container mt-5">
@@ -35,7 +35,7 @@
         </div>
     </div>
     <div class="container mt-5" style="border-top: 1px solid rgb(82, 78, 78);min-height: 30vh">
-        <h1 class="mt-4">Undergraduate Admissions & Aid</h1>
+        <h2 class="mt-4">Undergraduate Admissions & Aid</h2>
         <div class="row mt-2">
             <div class="col-lg-6  align-items-center ">
                 <h5>
@@ -55,7 +55,7 @@
         </div>
     </div>
     <div class="container  mt-5" style="border-top: 1px solid rgb(82, 78, 78);min-height: 30vh">
-        <h1 class="mt-4">Graduate Admissions & Aid</h1>
+        <h2 class="mt-4">Graduate Admissions & Aid</h2>
         <div class="row mt-2">
             <div class="col-lg-6">
                 <h5>
@@ -73,7 +73,7 @@
         </div>
     </div>
     <div class="container mt-5" style="border-top: 1px solid rgb(82, 78, 78);min-height: 30vh">
-        <h1 class="mt-4">Professional & Executive Education</h1>
+        <h2 class="mt-4">Professional & Executive Education</h2>
         <div class="row mt-2">
             <div class="col-lg-6">
                 <h5>

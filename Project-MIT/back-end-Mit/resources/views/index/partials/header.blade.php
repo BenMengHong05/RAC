@@ -14,9 +14,7 @@
             </div>
         </div>
         <!-- /Search -->
-
         <ul class="navbar-nav flex-row align-items-center ms-auto">
-            <!-- Place this tag where you want the button to render. -->
             <!-- User -->
             <li class="nav-item navbar-dropdown dropdown-user dropdown">
                 <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
@@ -24,53 +22,6 @@
                         <img src="{{ asset('image/mit_logo.png') }}" alt class="w-px-40 h-auto rounded-circle" />
                     </div>
                 </a>
-                <ul class="dropdown-menu dropdown-menu-end">
-                    <li>
-                        <a class="dropdown-item" href="#">
-                            <div class="d-flex">
-                                <div class="flex-shrink-0 me-3">
-                                    <div class="avatar ">
-                                        <img src="{{ asset('image/mit_logo.png') }}" alt
-                                            class="w-px-40 h-auto rounded-circle" />
-                                    </div>
-                                </div>
-                                <div class="flex-grow-1">
-                                    <span class="fw-medium d-block">PAC</span>
-                                    <small class="text-muted">Admin</small>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <div class="dropdown-divider"></div>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="#">
-                            <i class="bx bx-user me-2"></i>
-                            <span class="align-middle">Profile</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="#">
-                            <i class="bx bx-cog me-2"></i>
-                            <span class="align-middle">Settings</span>
-                        </a>
-                    </li>
-                    <li>
-                        <div class="dropdown-divider"></div>
-                    </li>
-                    <li >
-                        <a href="{{ route('logout') }}" class=" dropdown-item d-flex align-items-center text-danger"
-                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();" target="_blank">
-                            <i class=' bx bx-power-off me-2 m-0 p-0'></i>
-                            <div data-i18n="Support" class="align-middle">{{__('messages.Logout')}}</div>
-                        </a>
-                        <!-- Hidden form to handle the POST request -->
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                            @csrf
-                        </form>
-                    </li>
-                </ul>
             </li>
             <!--/ User -->
         </ul>

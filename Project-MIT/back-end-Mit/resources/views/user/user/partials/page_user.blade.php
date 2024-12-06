@@ -45,6 +45,7 @@
                             <th>No</th>
                             <th>Name</th>
                             <th>Email</th>
+                            <th>Password</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -59,6 +60,7 @@
                                 <td>{{ $index + 1 }}</td>
                                 <td>{{ $user->name }}</td>
                                 <td>{{ $user->email }}</td>
+                                <td>{{ $user->password }}</td>
                                 <td>
                                     <div class="dropdown">
                                         <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">

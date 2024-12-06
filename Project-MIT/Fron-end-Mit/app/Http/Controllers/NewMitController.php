@@ -13,11 +13,7 @@ class NewMitController extends Controller
     {
 
 
-        $objNewmits =NewMit::where('categorie_id','9')->orderby('id', 'desc')->get();
-        // $objCategories = Categorie::with('newmits')->get();
-        // $objCategories = Categorie::with('newmits')
-        //                 ->where('id','9')
-        //                 ->orderBy('id', 'desc')->get();
+        $objNewmits =NewMit::orderby('id', 'desc')->get();
         return view('index.index', compact('objNewmits'));
     }
 

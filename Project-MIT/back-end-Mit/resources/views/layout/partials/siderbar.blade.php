@@ -27,10 +27,22 @@
             </a>
             <ul class="menu-sub ">
                 <li class="menu-item">
-                    <a href="/categories" class="menu-link">
+                    <a href="" class="menu-link menu-toggle">
                         <i class='menu-icon tf-icons bx bx-category'></i>
                         <div data-i18n="newmit_categories">{{__('messages.Categories')}}</div>
                     </a>
+                    <ul class="menu-sub">
+                        <li class="menu-item">
+                            <a href="/categories" class="menu-link">
+                                <div data-i18n="newmits">Category</div>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="/categorie_paths" class="menu-link">
+                                <div data-i18n="Admin">Category_Path</div>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
             <ul class="menu-sub">
@@ -46,7 +58,7 @@
                                 <div data-i18n="newmits">{{__('messages.News')}}</div>
                             </a>
                         </li>
-                        <li class="menu-item">
+                        {{-- <li class="menu-item">
                             <a href="/educations" class="menu-link">
 
                                 <div data-i18n="Admin">{{__('messages.Educations')}}</div>
@@ -54,7 +66,6 @@
                         </li>
                         <li class="menu-item">
                             <a href="/researchs" class="menu-link">
-
                                 <div data-i18n="staff">{{__('messages.Researchs')}}</div>
                             </a>
                         </li>
@@ -83,7 +94,7 @@
                             <a href="/aboutmits" class="menu-link">
                                 <div data-i18n="New">{{__('messages.Aboutschool')}}</div>
                             </a>
-                        </li>
+                        </li> --}}
                     </ul>
                 </li>
             </ul>
@@ -147,7 +158,7 @@
             </a>
             <ul class="menu-sub">
                 <li class="menu-item">
-                    <a href="/erro" class="menu-link">
+                    <a href="/error" class="menu-link">
                         <div data-i18n="Error">{{__('messages.Error')}}</div>
                     </a>
                 </li>

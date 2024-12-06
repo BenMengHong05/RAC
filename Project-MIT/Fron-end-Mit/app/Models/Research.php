@@ -8,5 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Research extends Model
 {
     use HasFactory;
-    protected $table = 'researchs';
+    protected $table = 'categories_paths';
+    public function categories(){
+        return $this->belongsTo(Categorie::class, 'categorie_id');
+
+    }
 }

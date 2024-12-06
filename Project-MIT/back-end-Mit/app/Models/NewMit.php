@@ -10,15 +10,4 @@ class NewMit extends Model
 {
     use HasFactory;
     protected $table = 'newmits';
-    protected $fillable = [
-        'image',
-        'title',
-        'description'
-        
-    ];
-    public function categorie(){
-        return $this->belongsTo(Categorie::class,'categorie_id');
-    }
-
-
 }

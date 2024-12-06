@@ -1,11 +1,38 @@
 <footer class="container-fluid home-footer  education-footer ms-0 p-4">
     <div class="row d-flex align-items-center justify-content-center" style="min-height: 18vh">
-        <div class=" col-lg-2 d-flex align-items-start justify-content-center " style="min-width: 20vh;min-height: 18vh">
-            <img class="MIT-img"  src="{{ url('images/Massachusetts_Institute_of_Technology-Logo.wine.png') }}" alt=""
-                style="width: 70%; height: 100%;">
-        </div>
         <div class="col-lg-10 footer-menu">
             <div class="row">
+                <div class="col-lg-5">
+                    <div class="row  d-flex" style="flex-direction: row">
+                        <div class="col-lg-9 d-flex " style="width: 500px">
+                            <ul style="border-left: 1px solid black;">
+                                <li><a class="screen-360" href="">Education</a></li>
+                                <li><a class="screen-360" href="">Admissions + Aid</a></li>
+                                <li><a class="screen-360" href="">About MIT</a></li>
+                            </ul>
+                            <ul class="ms-2 " style="border-left: 1px solid black;">
+                                <li><a class="screen-360" href="">Research</a></li>
+                                <li><a class="screen-360" href="">Campus Life</a></li>
+                                <li><a class="screen-360" href="">Alumni</a></li>
+                            </ul>
+                            <ul class="ms-2" style="border-left: 1px solid black">
+                                <li><a class="screen-360" href="">Innovation</a></li>
+                                <li><a class="screen-360" href="">News</a></li>
+                            </ul>
+
+                        </div>
+                        <div class="col-lg-3  d-flex justify-content-center" style="width: 170px">
+                            <div class="footer-box  " >
+                                <div class="footer-box-content border border-danger d-flex p-2">
+                                    <p class="footer-paragrab m-1">Join us <br>
+                                        in building a <br>
+                                        better world.</p>
+                                    <i class="fa-solid fa-arrow-up m-1 "></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="col-lg-7 d-flex flex-column align-items-start justify-content-start">
                     <h6 >Massachusetts Institute of Technology</h6>
                     <p >77 Massachusetts Avenue, Cambridge, MA, USA</p>
@@ -31,42 +58,12 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-5">
-                    <div class="row">
-                        <div class="col-lg-9 d-flex">
-                            <ul style="border-left: 1px solid black;">
-                                <li><a class="screen-360" href="">Education</a></li>
-                                <li><a class="screen-360" href="">Admissions + Aid</a></li>
-                                <li><a class="screen-360" href="">About MIT</a></li>
-                            </ul>
-                            <ul class="ms-2 " style="border-left: 1px solid black;">
-                                <li><a class="screen-360" href="">Research</a></li>
-                                <li><a class="screen-360" href="">Campus Life</a></li>
-                                <li><a class="screen-360" href="">Alumni</a></li>
-                            </ul>
-                            <ul class="ms-2" style="border-left: 1px solid black">
-                                <li><a class="screen-360" href="">Innovation</a></li>
-                                <li><a class="screen-360" href="">News</a></li>
-                            </ul>
 
-                        </div>
-                        <div class="col-lg-3 ">
-                            <div class="footer-box d-flex  justify-content-center  " style="min-width: 35%">
-                                <div class="footer-box-content border border-danger d-flex p-2">
-                                    <p class="footer-paragrab m-1">Join us <br>
-                                        in building a <br>
-                                        better world.</p>
-                                    <i class="fa-solid fa-arrow-up m-1 "></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
-    <div class="row ">
-        <div class="col-lg-12 d-flex align-items-center justify-content-center">
+    <div class="row footer-description-new ">
+        <div class="col-lg-12 ">
             <p>© Copyright MIT. All Rights Reserved<br>
                 Designed by BEN MENGHONG</p>
         </div>
@@ -79,7 +76,6 @@
 </script>
 
 @stack('script')
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
@@ -90,6 +86,7 @@ $(document).ready(function(){
     });
   });
 });
+
 </script>
 
 </body>

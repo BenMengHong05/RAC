@@ -12,8 +12,11 @@
         font-weight: bold;
         color: #696cff;
     }
+p{
+   
+}
 </style>
 <div class="page-notfound">
-    <h1>404</h1>
-    <h2>Page is Not Found???</h2>
+    <img src="{{asset('image/Error-page.png')}}" class="img-error"  width="500">
+    <p>Page Is Not Found Plase Search Again</p>
 </div>

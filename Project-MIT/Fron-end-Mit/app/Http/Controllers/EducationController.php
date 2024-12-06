@@ -12,8 +12,9 @@ class EducationController extends Controller
      */
     public function index()
     {
-        $educations = Education::orderby('id', 'desc')->first();
-        return view('education.index', compact('educations'));
+        // $objEducation_titles =Education::where('categorie_id','18')->orderby('id', 'asc')->get();
+        // $objEducations_descriptions = Education::where('categorie_id','19')->orderby('id', 'asc')->get();
+        // return view('education.index', compact('objEducation_titles','objEducations_descriptions'));
     }
     /**
      * Show the form for creating a new resource.

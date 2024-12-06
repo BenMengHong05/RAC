@@ -45,17 +45,17 @@ class Handler extends ExceptionHandler
             //
         });
     }
-    /**
-     * Render an exception into an HTTP response.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \Throwable  $exception
-     */
-    public function render($request, Throwable $exception){
-        if($this->isHttpException($exception)){
-            return response()->view('page.index_error');
-        }else{
-            return response()->view('page.index_error');
-        }
-    }
+    // /**
+    //  * Render an exception into an HTTP response.
+    //  *
+    //  * @param  \Illuminate\Http\Request  $request
+    //  * @param  \Throwable  $exception
+    //  */
+    // public function render($request, Throwable $exception){
+    //     if($this->isHttpException($exception)){
+    //         return response()->view('page.index_error');
+    //     }else{
+    //         return response()->view('page.index_error');
+    //     }
+    // }
 }

@@ -1,4 +1,4 @@
-<div class="col-md-12 col-lg-12  main-content bg-light">
+<div class="col-md-12 col-lg-12  main-content bg-light" id="mySearch">
     <div class="scrol-down">
         <div class="scrol-text">
             <div class="tamplate container-fluid  " style="position: relative;background-color: rgb(184, 190, 197)">
@@ -18,8 +18,8 @@
                                 style="width: 100%; height: 80vh;">
                         </div>
                         <div class="ps-4 mt-2 d-none" style="width: 15%">
-                            <h1 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;border-bottom: 1px solid red"
-                                >{{ $Newmit->title }}</h1>
+                            <h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;border-bottom: 1px solid red"
+                                >{{ $Newmit->title }}</h2>
                         </div>
                         <div class="ps-4 mt-2">
                             <h3 class="new-description" >
@@ -45,11 +45,11 @@
                 </div>
                 <div class="row mt-5">
                     @foreach ($objNewmits as $index => $Newmit)
-                        @if ($index !== 0)
+                        @if ($index >=1 && $index <= 6)
                             <div class="col-md-12  col-lg-6">
                                 <img src="{{ asset('images/' . $Newmit->image) }}" alt="Education Image" class="image-fluid"  style="width: 100%; height: 40vh;" >
                                 <div class="img-text mt-4">
-                                    <h5 class="title-categories">{{ $Newmit->title }}</h5>
+                                    <h6 class="title-categories">{{ $Newmit->title }}</h6>
                                     <h6 class="img-text-hover  category-descrition"  >{{ $Newmit->description }}</h6>
                                 </div>
                             </div>

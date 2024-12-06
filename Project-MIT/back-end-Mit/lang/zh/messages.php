@@ -19,7 +19,7 @@ return [
     'Posts' => '貼文',
     'News' => '訊息',
     'Educations' => '教育經歷',
-    'Researchs' => 'Researchs',
+    'Researchs' => '研究',
     'Innovations' => '研究',
     'Admissions_aids' => '招生輔助工具',
     'Campuslifes' => '校園生活',

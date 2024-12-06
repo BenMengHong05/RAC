@@ -40,17 +40,6 @@
                                                 <input type="text" name="description" id="description" class="form-control" value="{{ isset($newmitEdit) ? old('description', $newmitEdit->description) : old('description') }}" required>
                                             </div>
                                             <div class="mb-3">
-                                                <label for="categorie_id" class="form-label">Select categorie</label>
-                                                <select name="categorie_id" id="categorie_id" class="form-control" required>
-                                                    @foreach ($categories as $categorie)
-                                                        <option value="{{ $categorie->id }}"
-                                                                {{ (isset($newmitEdit) && $newmitEdit->categorie_id == $categorie->id) ? 'selected' : '' }}>
-                                                            {{ $categorie->name }}
-                                                        </option>
-                                                    @endforeach
-                                                </select>
-                                            </div>
-                                            <div class="mb-3">
                                                 <label for="image" class="form-label">Image</label>
                                                 @if (isset($newmitEdit) && $newmitEdit->image)
                                                     <div class="mb-3">

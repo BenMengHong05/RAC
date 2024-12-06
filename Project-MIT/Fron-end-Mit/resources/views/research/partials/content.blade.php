@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-lg-12 " style="margin-top: 25vh;font-family: sans-serif">
-                <ul class="d-flex gap-2">
+                <ul class="d-flex  ps-3  gap-2">
                     <li><a href="" class="text-black">Home</a></li>
                     <li style="color: red">/</li>
                     <li>Research</li>
@@ -12,9 +12,9 @@
         </div>
         <div class="container mt-5">
             <div class="row ">
-                <h1>
+                <h2>
                    {{$researchs->title}}
-                </h1>
+                </h2>
             </div>
         </div>
         <div class="container mt-5">
@@ -33,7 +33,7 @@
         </div>
     </div>
     <div class="container mt-5" style="border-top: 1px solid rgb(82, 78, 78);min-height: 50vh">
-        <h1 class="mt-4 ">Centers, Labs & Programs</h1>
+        <h2 class="mt-4 ">Centers, Labs & Programs</h2>
         <div class="row mt-2">
             <div class="col-lg-6  align-items-center mt-5 ">
                 <h5>
@@ -41,7 +41,7 @@
                     here are just some of the MIT labs, centers, and programs where groundbreaking research is happening
                     every day.
                 </h5>
-                <div class="row mt-5 ms-0" style="width: 40vh">
+                <div class="row py-5" style="width: 40vh">
                     <div class=" d-flex align-items-center justify-content-center">
                         <button style="width: 50vh;" class="p-3 education-shcool ">View Centers, Labs & Programs</button>
                     </div>
@@ -57,14 +57,14 @@
         </div>
     </div>
     <div class="container  mt-5" style="border-top: 1px solid rgb(82, 78, 78);min-height: 50vh">
-        <h1 class="mt-4">Teaching & Learning</h1>
+        <h2 class="mt-4">Teaching & Learning</h2>
         <div class="row mt-2">
             <div class="col-lg-6 mt-5">
                 <h5>
                     MIT researchers collaborate with many leading local, national, and international <span class="ul-hover-4">organizations</span> to
                     further drive exploration.
                 </h5>
-                <div class="row mt-5 ms-0" style="width: 40vh">
+                <div class="row py-5" style="width: 40vh">
                     <div class="d-flex align-items-center justify-content-center">
                         <button style="width: 50vh;" class="p-3  education-shcool ">View Collaborating Institutions</button>
                     </div>

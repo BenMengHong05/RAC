@@ -10,6 +10,7 @@ use App\Http\Controllers\Information_NewController;
 use App\Http\Controllers\InnovationController;
 use App\Http\Controllers\NewMitController;
 use App\Http\Controllers\ResearchController;
+use App\Http\Controllers\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,7 +29,6 @@ use App\Http\Controllers\ResearchController;
 
 
 Route::get('/',[NewMitController::class,'index']);
-Route::get('/education',[EducationController::class,'index'])->name('education');
 Route::get('/research',[ResearchController::class,'index'])->name('research');
 Route::get('/innovation',[InnovationController::class,'index'])->name('innovation');
 Route::get('/admissions_aid',[Admissions_AidController::class,'index'])->name('admissions_aid');
@@ -36,6 +36,7 @@ Route::get('/campuslife',[Campus_LifeController::class,'index'])->name('campusli
 Route::get('/news',[Information_NewController::class,'index'])->name('news');
 Route::get('/alumni',[AlumniController::class,'index'])->name('alumnu');
 Route::get('/aboutmit',[AboutMitController::class, 'index'])->name('aboutmit');
+Route::get('/category/{id}/show',[CategoryController::class, 'show'])->name('category.show');
 Route::get("/error", function(){
     return view('page.index_error');
 });

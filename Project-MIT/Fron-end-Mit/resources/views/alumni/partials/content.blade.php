@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-lg-12 " style="margin-top: 25vh;font-family: sans-serif">
-                <ul class="d-flex gap-2">
+                <ul class="d-flex  ps-3  gap-2">
                     <li><a href="" class="text-black">Home</a></li>
                     <li style="color: red">/</li>
                     <li>Alumni</li>
@@ -12,9 +12,9 @@
         </div>
         <div class="container mt-5">
             <div class="row ">
-                <h1>
+                <h2>
                     {{$objAlumnis->title}}
-                </h1>
+                </h2>
             </div>
         </div>
         <div class="container mt-5">
@@ -33,7 +33,7 @@
         </div>
     </div>
     <div class="container mt-5" style="border-top: 1px solid rgb(82, 78, 78)">
-        <h1 class="mt-4">Get Involved</h1>
+        <h2 class="mt-4">Get Involved</h2>
         <div class="row">
             <div class="col-lg-6  ">
                 <h5>
@@ -59,7 +59,7 @@
         </div>
     </div>
     <div class="container mt-5" style="border-top: 1px solid rgb(82, 78, 78)">
-        <h1 class="mt-4">MIT Alumni News</h1>
+        <h2 class="mt-4">MIT Alumni News</h2>
         <div class="row mt-2">
             <div class="col-lg-6" style="min-width: 50%">
                 <h5>
