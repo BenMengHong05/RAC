@@ -25,7 +25,12 @@ return [
     'Campuslifes' => '校園生活',
     'Alumins' => '鋁',
     'Aboutschool' => '關於學校',
-    'Error'=> '錯誤'
+    'Error'=> '錯誤',
+    'categories_path'=> '類別路徑',
+    'categories_image'=> '类别图像',
+    'Khmer'=> '高棉語',
+    'English'=> '英語',
+    'Chinese'=> '中國人',
 ];
 
 ?>

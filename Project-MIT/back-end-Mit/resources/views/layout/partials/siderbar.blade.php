@@ -34,12 +34,17 @@
                     <ul class="menu-sub">
                         <li class="menu-item">
                             <a href="/categories" class="menu-link">
-                                <div data-i18n="newmits">Category</div>
+                                <div data-i18n="newmits">{{__('messages.Categories')}}</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="/categorie_paths" class="menu-link">
-                                <div data-i18n="Admin">Category_Path</div>
+                                <div data-i18n="Admin">{{__('messages.categories_path')}}</div>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="/categorie_images" class="menu-link">
+                                <div data-i18n="Admin">categories_images</div>
                             </a>
                         </li>
                     </ul>
@@ -60,7 +65,6 @@
                         </li>
                         {{-- <li class="menu-item">
                             <a href="/educations" class="menu-link">
-
                                 <div data-i18n="Admin">{{__('messages.Educations')}}</div>
                             </a>
                         </li>
@@ -131,22 +135,22 @@
         <li class="menu-item w-100">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class=" menu-icon tf-icons fa-solid fa-globe"></i>
-                <div data-i18n="Authentications">Languages</div>
+                <div data-i18n="Authentications">{{__('messages.Languages')}}</div>
             </a>
             <ul class="menu-sub">
                 <li class="menu-item">
                     <a href="{{ route('lang.switch',['lang'=>'kh']) }}" class="menu-link">
-                        Khmer
+                        {{__('messages.Khmer')}}
                     </a>
                 </li>
                 <li class="menu-item">
                     <a href="{{ route('lang.switch', ['lang'=>'en']) }}" class="menu-link">
-                        English
+                        {{__('messages.English')}}
                     </a>
                 </li>
                 <li class="menu-item">
                     <a href="{{ route('lang.switch', ['lang'=>'zh']) }}" class="menu-link">
-                        Chinese
+                        {{__('messages.Chinese')}}
                     </a>
                 </li>
             </ul>

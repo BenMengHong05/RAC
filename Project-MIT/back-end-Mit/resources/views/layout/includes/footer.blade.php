@@ -22,6 +22,17 @@
         });
     }
 </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#search").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#search-table  tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});~
+</script>
 <script src="{{asset('vendor/libs/jquery/jquery.js')}}"></script>
 <script src="{{asset('vendor/libs/popper/popper.js')}}"></script>
 <script src="{{asset('vendor/js/bootstrap.js')}}"></script>

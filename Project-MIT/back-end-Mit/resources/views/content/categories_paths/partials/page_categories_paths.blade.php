@@ -1,7 +1,7 @@
 <div class="content-wrapper">
     <div class="container-xxl flex-grow-1 container-p-y">
         <div class="mb-4">
-            <h2 class="m-0 p-0  text-muted">fd / <span class="text-dark">categories_path</span></h2>
+            <h2 class="m-0 p-0  text-muted">{{__('messages.Contents')}} / <span class="text-dark">{{__('messages.categories_path')}}</span></h2>
         </div>
         <div class="card">
             @if (Session::has('success'))
@@ -21,12 +21,11 @@
             @endif
             <div class="car-header d-flex mt-3 align-items-center justify-content-between" style="min-height: 7vh">
                 <div class="add d-flex align-items-center gap-4 ms-4 " style="width: 60%">
-                    <form action="{{ route('categorie_path_search') }}" method="GET" class="d-flex">
-                        <input type="text" class="form-control " name="search" value="{{ request('search') }}"
-                            id="search" placeholder="Search..." style="width: 100%">
-                        <button class="btn btn-primary mx-2 ps-3 px-3 " style="white-space: nowrap" type="submit">
-                            <i class='bx bx-search-alt'></i>
-                            {{ __('messages.Search') }}
+                    <form action="{{ route('categorie_path_search') }}" method="GET" class="d-flex" id="server-search-form">
+                        <input type="text" class="form-control" name="search" id="search-input"
+                               value="{{ request('search') }}" placeholder="{{__('messages.Search')}}" style="width: 100%">
+                        <button class="btn btn-primary mx-2 ps-3 px-3" style="white-space: nowrap" type="submit">
+                            <i class='bx bx-search-alt'></i> {{ __('messages.Search') }}
                         </button>
                     </form>
                 </div>
@@ -39,7 +38,7 @@
                 </form>
             </div>
             <div class="table-responsive "> {{-- style="overflow: auto;white-space: nowrap;" --}}
-                <table class="table">
+                <table class="table" id="search">
                     <thead>
                         <tr>
                             <th>No</th>
@@ -62,8 +61,8 @@
                                     <td>{{ $index + 1 }}</td>
                                         <td><img src="{{ asset('images/' . $categorie_path->image) }}" alt=""
                                                 style="width: 10vh;height: 10vh"></td>
-                                    <td>{{ $categorie_path->categorie->name }}</td>
-                                    <td>{{ $categorie_path->title }}</td>   
+                                    <td class="categorie-name">{{ $categorie_path->categorie->name }}</td>
+                                    <td>{{ $categorie_path->title }}</td>
                                     <td>{{ $categorie_path->description }}</td>
                                     <td>{{ $categorie_path->image_description }}</td>
                                     <td>
@@ -102,9 +101,6 @@
         </div>
     </div>
 </div>
-
-
-
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
     function confirmDelete(categorie_pathId) {
@@ -118,7 +114,6 @@
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                // Submit the form after confirmation
                 document.getElementById('delete-form-' + categorie_pathId).submit();
                 Swal.fire({
                     title: "Deleted!",
@@ -128,4 +123,20 @@
             }
         });
     }
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+   $(document).ready(function () {
+    $("#search-input").on("keyup", function () {
+        var value = $(this).val().toLowerCase();
+        $("#search-table tr").filter(function () {
+            $(this).toggle($(this).find(".categorie-name").text().toLowerCase().indexOf(value) > -1);
+        });
+    });
+    $("#server-search-form").on("submit", function (e) {
+        if ($("#search-input").val().trim() === "") {
+            e.preventDefault();
+        }
+    });
+});
 </script>

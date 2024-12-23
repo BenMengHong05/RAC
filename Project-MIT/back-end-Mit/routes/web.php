@@ -6,6 +6,7 @@ use App\Http\Controllers\AluminController;
 use App\Http\Controllers\AlumniController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CampusLifeController;
+use App\Http\Controllers\Categorie_Image_Controller;
 use App\Http\Controllers\PostController;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Route;
@@ -51,11 +52,7 @@ Route::get("/register" , [AuthController::class,"register"])
 Route::post("/register", [AuthController::class,"registerPost"])
 ->name("register.post");
 Route::Post("logout", [AuthController::class,"logout"])->name("logout");
-
-// Group of routes requiring authentication
 Route::middleware("auth")->group(function() {
-
-
     Route::get("/lang{lang}", [LanguageController::class , 'switchlang'])->name('lang.switch');
 
     Route::get('/dashboard', [LanguageController::class, 'index'])->name('dashboard');
@@ -187,6 +184,15 @@ Route::middleware("auth")->group(function() {
     Route::get("/categorie_path_delete/{id}/edit", [Categories_Path_Controller::class, "edit"])->name("categorie_path_edit");
     Route::put("/categorie-paths/{id}", [Categories_Path_Controller::class, "update"])->name("categorie_path_update");
     Route::get('/categorie_path/search', [Categories_Path_Controller::class, 'search'])->name('categorie_path_search');
+
+    Route::get('/categorie_images', [Categorie_Image_Controller::class, 'index'])->name('categorie_images');
+    Route::get("/categorie_image_create" , [Categorie_Image_Controller::class, "create"])->name("categorie_image_create");
+    Route::post("/categorie_image_store", [Categorie_Image_Controller::class, "store"])->name("categorie_image_store");
+    Route::get("/categorie_images_show/{id}", [Categorie_Image_Controller::class, "show"])->name("categorie_images_show");
+    Route::delete("/categorie_image/delete/{id}", [Categorie_Image_Controller::class, "delete"])->name("categorie_image_delete");
+    Route::get("/categorie_image_delete/{id}/edit", [Categorie_Image_Controller::class, "edit"])->name("categorie_image_edit");
+    Route::put("/categorie-images/{id}", [Categorie_Image_Controller::class, "update"])->name("categorie_image_update");
+    Route::get('/categorie_image/search', [Categorie_Image_Controller::class, 'search'])->name('categorie_image_search');
 
      Route::get("/error", function(){
          return view('page.index_error');

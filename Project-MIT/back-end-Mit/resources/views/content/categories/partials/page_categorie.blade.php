@@ -22,15 +22,15 @@
         @endif
             <div class="car-header d-flex mt-3 align-items-center justify-content-between" style="min-height: 7vh">
                 <div class="add d-flex align-items-center~ gap-4 ms-4 " style="width: 60%">
-                    <form action="{{ route('categorie_search') }}" method="GET" class="d-flex">
-                        <input type="text" class="form-control " name="search" value="{{ request('search') }}"
-                            id="search" placeholder="Search..." style="width: 100%">
-                        <button class="btn btn-primary mx-2 ps-3 px-3 " style="white-space: nowrap" type="submit">
-                            <i class='bx bx-search-alt'></i>
-                            {{__('messages.Search')}}
+                    <form action="{{ route('categorie_search') }}" method="GET" class="d-flex" id="server-search-form">
+                        <input type="text" class="form-control" name="search" id="search-input"
+                               value="{{ request('search') }}" placeholder="{{__('messages.Search')}}" style="width: 100%">
+                        <button class="btn btn-primary mx-2 ps-3 px-3" style="white-space: nowrap" type="submit">
+                            <i class='bx bx-search-alt'></i> {{ __('messages.Search') }}
                         </button>
                     </form>
                 </div>
+
                 <form action="{{ route('categorie_create') }}" class="ps-2 " method="GET">
                     @csrf
                     <button type="submit" class="btn btn-success ps-3 px-3 mx-4">
@@ -61,10 +61,13 @@
                             @foreach ($categories as $index => $categorie)
                                 <tr>
                                     <td>{{ $index + 1 }}</td>
-                                    <td>{{ $categorie->name }}</td>
+                                    <td class="categorie-name">{{ $categorie->name }}</td>
                                     <td>{{ $categorie->title }}</td>
                                     <td>{{ $categorie->description }}</td>
-                                    <td>{{ $categorie->image }}</td>
+                                    {{-- <td>{{ $categorie->image }}</td> --}}
+                                    <td>
+                                        <img src="{{ asset('images/' . $categorie->image) }}" alt="Image" style="width: 60px; height: 60px; object-fit: cover;">
+                                    </td>
                                     <td>
                                         <div class="dropdown">
                                             <button type="button" class="btn p-0 dropdown-toggle hide-arrow"
@@ -126,4 +129,20 @@
             }
         });
     }
+</script>
+<script>
+  <script>
+   $(document).ready(function () {
+    $("#search-input").on("keyup", function () {
+        var value = $(this).val().toLowerCase();
+        $("#search-table tr").filter(function () {
+            $(this).toggle($(this).find(".categorie-name").text().toLowerCase().indexOf(value) > -1);
+        });
+    });
+    $("#server-search-form").on("submit", function (e) {
+        if ($("#search-input").val().trim() === "") {
+            e.preventDefault();
+        }
+    });
+});
 </script>

@@ -26,6 +26,11 @@ return [
     'Campuslifes' => 'ជីវិតក្នុងបរិវេណសាលា',
     'Alumins' => 'អាលុយមីញ៉ូម',
     'Aboutschool' => 'អំពីសាលា',
-    'Error' => 'កំហុស'
+    'Error' => 'កំហុស',
+    'categories_path' => 'ផ្លូវប្រភេទ',
+    'categories_image'=> 'ប្រភេទរូបភាព',
+    'Khmer'=> 'ខ្មែរ',
+    'English'=> 'អង់គ្លេស',
+    'Chinese'=> 'ចិន',
 ]
 ?>

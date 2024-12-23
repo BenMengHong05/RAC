@@ -23,7 +23,7 @@
                 <div class="add d-flex align-items-center gap-4 ms-4 " style="width: 60%">
                     <form action="{{ route('student_search') }}" method="GET" class="d-flex">
                         <input type="text" class="form-control " name="search" value="{{ request('search') }}"
-                            id="search" placeholder="Search..." style="width: 100%">
+                            id="search" placeholder="{{__('messages.Search')}}" style="width: 100%">
                         <button class="btn btn-primary mx-2 ps-3 px-3 " style="white-space: nowrap" type="submit">
                             <i class='bx bx-search-alt'></i>
                             {{__('messages.Search')}}

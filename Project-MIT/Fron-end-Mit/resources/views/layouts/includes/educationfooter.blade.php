@@ -1,16 +1,16 @@
 <footer class="education-footer container-fluid   ms-0 p-4">
     <div class=" education-footer-content row d-flex align-items-center justify-content-center " style="min-height: 18vh">
-        <div class="education-footer-content-logo col-lg-2 d-flex align-items-center justify-content-start " style="min-width: 20vh;min-height: 18vh">
-            <img src="{{ url('images/Massachusetts_Institute_of_Technology-Logo.wine.png') }}" alt=""
-                style="width: 60%; height: 100%;">
+        <div class="education-footer-content-logo  col-lg-2 d-flex align-items-start justify-content-center " style="min-width: 20vh;min-height: 18vh">
+            <img src="{{ url('images/rac_logo.png') }}" alt="" class="d-none d-lg-block "
+                style="width: 50%; height: 60%;">
         </div>
         <div class="col-lg-10 footer-menu ">
             <div class="row">
                 <div class="col-lg-6 col-md-12  d-flex flex-column align-items-start justify-content-start" >
-                    <h6 >Massachusetts Institute of Technology</h6>
-                    <p >77 Massachusetts Avenue, Cambridge, MA, USA</p>
+                    <h6 class="footer-title">រាជបណ្ឌិត្យសភាកម្ពុជា​</h6>
+                    {{-- <p >រាជបណ្ឌិត្យសភាកម្ពុជា​ MA, CMB</p> --}}
                     <div class="row footer-ul-li-a gap-3 d-flex  w-100">
-                        <ul class="col-lg-12 d-flex gap-3 ">
+                        <ul class="col-lg-12 d-flex gap-3 footer-description">
                             <li><a href="">Visit</a></li>
                             <li><a href="">Map</a></li>
                             <li><a href="">Events</a></li>
@@ -24,37 +24,37 @@
                             <li><a href="">Privacy</a></li>
                             <li><a href="">Accessibility</a></li>
                             <li><a href="" >SocialMediaHub</a></li>
-                            <li><a href=""><i class="fa-brands fa-x-twitter twitter"></i></a></li>
-                            <li><a href=""><i class="fa-brands fa-facebook-f facebook"></i></a></li>
-                            <li><a href=""><i class="fa-brands fa-youtube"></i></a></li>
-                            <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="https://www.facebook.com/rac.gov.kh"><i class="fa-brands fa-facebook-f facebook"></i></a></li>
+                            <li><a href="https://www.youtube.com/channel/UCE2-mDBbetmonrNa7jIhwIA"><i class="fa-brands fa-youtube"></i></a></li>
                         </ul>
 
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-12  footer-menu-2 ">
-                    <div class="row footer-menu-item " >
-                        <div class="col-lg-8  d-flex" >
-                            <ul style="border-left: 1px solid black;">
-                                <li><a class="screen-360" href="">Education</a></li>
-                                <li><a class="screen-360" href="">Admissions + Aid</a></li>
-                                <li><a class="screen-360" href="">About MIT</a></li>
-                            </ul>
-                            <ul class="ms-2 " style="border-left: 1px solid black;">
-                                <li><a class="screen-360" href="">Research</a></li>
-                                <li><a class="screen-360" href="">Campus Life</a></li>
-                                <li><a class="screen-360" href="">Alumni</a></li>
-                            </ul>
-                            <ul class="ms-2" style="border-left: 1px solid black">
-                                <li><a class="screen-360" href="">Innovation</a></li>
-                                <li><a class="screen-360" href="">News</a></li>
-                            </ul>
+                <div class="col-lg-6  col-md-12  footer-menu-2 ">
+                    <div class="row footer-menu-item d-flex justify-content-between "  style="width: 100%">
+                        <div class="col-lg-8"  style="width: 70%">
+                            <div class="menu-footer-category d-flex">
+                                <ul class="footer-menu-txt-category m-0 p-0 " style=";white-space: nowrap;">
+                                    <li><a class="screen-360" href="" style="display: inline-block">ការអប់រំ</a></li>
+                                    <li><a class="screen-360" href="" style="display: inline-block">ជំនួយការចូលរៀន</a></li>
+                                    <li><a class="screen-360" href="" style="display: inline-block">អំពី RAC</a></li>
+                                </ul>
+                                <ul class="ms-2 footer-menu-txt-category " style="white-space: nowrap;">
+                                    <li><a class="screen-360" href="" style="display: inline-block">ស្រាវជ្រាវ</a></li>
+                                    <li><a class="screen-360" href="" style="display: inline-block">ជីវិតក្នុងបរិវេណសាលា</a></li>
+                                    <li><a class="screen-360" href="" style="display: inline-block">អតីតនិស្សិត</a></li>
+                                </ul>
+                                <ul class="ms-2 footer-menu-txt-category " style="white-space: nowrap;">
+                                    <li><a class="screen-360" href="" style="display: inline-block">ការច្នៃប្រឌិត</a></li>
+                                    <li><a class="screen-360" href="" style="display: inline-block">ព័ត៌មាន</a></li>
+                                </ul>
+                            </div>
 
                         </div>
                         <div class="col-lg-4 " style="width: 170px">
                             <div class="footer-box" >
-                                <div class="footer-box-content border border-danger d-flex p-2" >
-                                    <p class="footer-paragrab m-1">Join us <br>
+                                <div class="footer-box-content  border border-danger d-flex p-3" >
+                                    <p class="footer-paragrab m-1 text-nowrap">Join us <br>
                                         in building a <br>
                                         better world.</p>
                                     <i class="fa-solid fa-arrow-up m-1 "></i>
@@ -67,9 +67,11 @@
         </div>
     </div>
     <div class=" row ">
-        <div class="col-lg-12 education-footer-content-description ">
-            <p>© Copyright MIT. All Rights Reserved<br>
-                Designed by BEN MENGHONG</p>
+        <div class="col-lg-12 d-flex flex-column  text-center education-footer-content-description ">
+            <div class="mt-5">
+                <h5 class="education-text-footer">@២០២៤​-រក្សាសិទ្ធិគ្រប់យ៉ាងដោយ​​ រាជបណ្ឌិត្យសភាកម្ពុជា​</h5>
+            </div>
+            <p class="education-text">អភិវឌ្ឍដោយ ការិយាល័យឌីជីថល នៃរាជបណ្ឌិត្យសភាកម្ពុជា</p>
         </div>
     </div>
 </footer>
@@ -99,33 +101,89 @@
         setupCarousel('featureContainer2', 'featureCarousel2', 3);
     });
 </script>
-
-{{-- <script>
-    function setupCarousel(containerId, carouselId, minPerSlide) {
-        let items = document.querySelectorAll(`#${containerId} .carousel2  .carousel-item2`);
-        items.forEach((el) => {
-            let next = el.nextElementSibling;
-            for (let i = 1; i < minPerSlide; i++) {
-                if (!next){
-                    next = items[0]; // Loop back to the first item
-                }
-                let cloneChild = next.cloneNode(true);
-                el.appendChild(cloneChild.children[0]);
-                next = next.nextElementSibling;
-            }
-        });
-
-        // Initialize the carousel with Bootstrap jQuery
-        $(`#${carouselId}`).carousel({
-            interval: false,
-        });
-        $(`#${carouselId}`).carousel('pause');
-    }
-
-    document.addEventListener("DOMContentLoaded", function () {
-        setupCarousel('featureContainer2', 'featureCarousel2', 3);
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  function myPlugin({ swiper, extendParams, on }) {
+    extendParams({
+      debugger: false,
     });
-</script> --}}
+    on('init', () => {
+      if (!swiper.params.debugger) return;
+      console.log('init');
+    });
+    on('click', (swiper, e) => {
+      if (!swiper.params.debugger) return;
+      console.log('click');
+    });
+    on('tap', (swiper, e) => {
+      if (!swiper.params.debugger) return;
+      console.log('tap');
+    });
+    on('doubleTap', (swiper, e) => {
+      if (!swiper.params.debugger) return;
+      console.log('doubleTap');
+    });
+    on('sliderMove', (swiper, e) => {
+      if (!swiper.params.debugger) return;
+      console.log('sliderMove');
+    });
+    on('slideChange', () => {
+      if (!swiper.params.debugger) return;
+      console.log(
+        'slideChange',
+        swiper.previousIndex,
+        '->',
+        swiper.activeIndex
+      );
+    });
+    on('slideChangeTransitionStart', () => {
+      if (!swiper.params.debugger) return;
+      console.log('slideChangeTransitionStart');
+    });
+    on('slideChangeTransitionEnd', () => {
+      if (!swiper.params.debugger) return;
+      console.log('slideChangeTransitionEnd');
+    });
+    on('transitionStart', () => {
+      if (!swiper.params.debugger) return;
+      console.log('transitionStart');
+    });
+    on('transitionEnd', () => {
+      if (!swiper.params.debugger) return;
+      console.log('transitionEnd');
+    });
+    on('fromEdge', () => {
+      if (!swiper.params.debugger) return;
+      console.log('fromEdge');
+    });
+    on('reachBeginning', () => {
+      if (!swiper.params.debugger) return;
+      console.log('reachBeginning');
+    });
+    on('reachEnd', () => {
+      if (!swiper.params.debugger) return;
+      console.log('reachEnd');
+    });
+  }
+</script>
+<script>
+  // Init Swiper
+  var swiper = new Swiper('.swiper', {
+    // Install Plugin To Swiper
+    modules: [myPlugin],
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    // Enable debugger
+    debugger: true,
+  });
+</script>
+
 @stack('script')
 </body>
 

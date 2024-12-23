@@ -16,5 +16,9 @@ class Categorie extends Model
     {
         return $this->hasMany(Categorie_Path::class, 'categorie_id');
     }
+    public function categories_image(){
+        return $this->hasMany(Categorie_Image::class , 'categorie_id');
+
+    }
 
 }

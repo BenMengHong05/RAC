@@ -30,7 +30,6 @@ class categorieController extends Controller
             'image' => 'image|mimes:png,jpg,jpeg,gif|max:2048',
         ]);
 
-        // Create new category
         $categorie = new Categorie();
         $categorie->name = $request->input('name');
         $categorie->title = $request->input('title');
@@ -46,14 +45,11 @@ class categorieController extends Controller
         return redirect()->route('categories')->with('success', 'Category added successfully.');
     }
 
-    // Show a specific category
     public function show($id)
     {
         $categorie = Categorie::findOrFail($id);
         return view('content.categories.view_categorie', compact('categorie'));
     }
-
-    // Delete a category
     public function delete($id)
     {
         $categorie = Categorie::find($id);
@@ -65,8 +61,6 @@ class categorieController extends Controller
         $categorie->delete();
         return redirect()->route('categories')->with('delete', 'Category deleted successfully.');
     }
-
-    // Show the edit form
     public function edit($id)
     {
         $categorieEdit = Categorie::findOrFail($id);

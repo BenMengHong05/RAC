@@ -11,6 +11,7 @@ use App\Http\Controllers\InnovationController;
 use App\Http\Controllers\NewMitController;
 use App\Http\Controllers\ResearchController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\SearchController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,6 +41,7 @@ Route::get('/category/{id}/show',[CategoryController::class, 'show'])->name('cat
 Route::get("/error", function(){
     return view('page.index_error');
 });
+Route::get('/search', [SearchController::class, 'search'])->name('search');
 
 
 

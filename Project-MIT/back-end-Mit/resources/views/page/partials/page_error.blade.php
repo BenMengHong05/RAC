@@ -13,8 +13,11 @@
         font-weight: bold;
         color: #696cff;
     }
+    p{
+        font-size: 1.5rem
+    }
 </style>
 <div class="page-notfound d-flex align-items-center justify-content-center flex-column ">
-    <img src="{{asset('image/Error-page.png')}}" class="img-error"  width="500">
+    <img src="{{asset('image/404 error with portals-pana.png')}}" class="img-error"  width="500">
     <p>Page Is Not Found Plase Search Again</p>
 </div>

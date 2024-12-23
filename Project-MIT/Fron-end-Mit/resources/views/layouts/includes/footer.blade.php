@@ -33,9 +33,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-7 d-flex flex-column align-items-start justify-content-start">
-                    <h6 >Massachusetts Institute of Technology</h6>
-                    <p >77 Massachusetts Avenue, Cambridge, MA, USA</p>
+                <div class="col-lg-7 mt-2 d-flex flex-column align-items-start justify-content-start">
+                    <h6>Royal Academy of Cambodia</h6>
+                    <p>Royal Academy of Cambodia MA, CMB</p>
                     <div class="row footer-ul-li-a gap-3 d-flex  w-100">
                         <ul class="col-lg-12 d-flex gap-4 ">
                             <li><a href="">Visit</a></li>
@@ -58,14 +58,13 @@
                         </ul>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
     <div class="row footer-description-new ">
         <div class="col-lg-12 ">
-            <p>© Copyright MIT. All Rights Reserved<br>
-                Designed by BEN MENGHONG</p>
+            <p>© Copyright RAC . All Rights Reserved<br>
+                Designed by RAC</p>
         </div>
     </div>
 </footer>
@@ -74,21 +73,17 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
 </script>
-
 @stack('script')
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script>
-$(document).ready(function(){
-  $("#myInput").on("keyup", function() {
-    var value = $(this).val().toLowerCase();
-    $("#mySearch").filter(function() {
-      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-    });
-  });
-});
-
+// $(document).ready(function(){
+//   $("#myInput").on("keyup", function() {
+//     var value = $(this).val().toLowerCase();
+//     $("#mySearch").filter(function() {
+//       $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+//     });
+//   });
+// });
 </script>
-
 </body>
-
 </html>

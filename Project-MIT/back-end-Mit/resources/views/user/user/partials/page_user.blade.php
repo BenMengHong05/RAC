@@ -23,7 +23,7 @@
                 <div class="add d-flex align-items-center gap-4 ms-4 " style="width: 60%">
                     <form action="{{ route('user_search') }}" method="GET" class="d-flex">
                         <input type="text" class="form-control " name="search" value="{{ request('search') }}"
-                            id="search" placeholder="Search..." style="width: 100%">
+                            id="search" placeholder="{{__('messages.Search')}}" style="width: 100%">
                         <button class="btn btn-primary mx-2 ps-3 px-3 " style="white-space: nowrap" type="submit">
                             <i class='bx bx-search-alt'></i>
                             {{__('messages.Search')}}
@@ -45,7 +45,6 @@
                             <th>No</th>
                             <th>Name</th>
                             <th>Email</th>
-                            <th>Password</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -60,7 +59,7 @@
                                 <td>{{ $index + 1 }}</td>
                                 <td>{{ $user->name }}</td>
                                 <td>{{ $user->email }}</td>
-                                <td>{{ $user->password }}</td>
+                                {{-- <td>{{ $user->password }}</td> --}}
                                 <td>
                                     <div class="dropdown">
                                         <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">

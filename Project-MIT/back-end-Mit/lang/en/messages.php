@@ -24,7 +24,12 @@ return [
     'Campuslifes' => 'Campuslifes',
     'Alumins' => 'Alumins',
     'Aboutschool' => 'Aboutschool',
-    'Error'=> 'Error'
+    'Error'=> 'Error',
+    'categories_path'=> 'categories_path',
+    'categories_image'=> 'categories_image',
+    'Khmer'=> 'Khmer',
+    'English'=> 'English',
+    'Chinese'=> 'Chinese',
 ]
 
 ?>
