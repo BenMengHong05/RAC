@@ -1,43 +1,11 @@
 <footer class="container-fluid home-footer  education-footer ms-0 p-4">
     <div class="row d-flex align-items-center justify-content-center" style="min-height: 18vh">
-        <div class="col-lg-10 footer-menu">
+        <div class="col-lg-10 footer-menu ">
             <div class="row">
-                <div class="col-lg-5">
-                    <div class="row  d-flex" style="flex-direction: row">
-                        <div class="col-lg-9 d-flex " style="width: 500px">
-                            <ul style="border-left: 1px solid black;">
-                                <li><a class="screen-360" href="">Education</a></li>
-                                <li><a class="screen-360" href="">Admissions + Aid</a></li>
-                                <li><a class="screen-360" href="">About MIT</a></li>
-                            </ul>
-                            <ul class="ms-2 " style="border-left: 1px solid black;">
-                                <li><a class="screen-360" href="">Research</a></li>
-                                <li><a class="screen-360" href="">Campus Life</a></li>
-                                <li><a class="screen-360" href="">Alumni</a></li>
-                            </ul>
-                            <ul class="ms-2" style="border-left: 1px solid black">
-                                <li><a class="screen-360" href="">Innovation</a></li>
-                                <li><a class="screen-360" href="">News</a></li>
-                            </ul>
-
-                        </div>
-                        <div class="col-lg-3  d-flex justify-content-center" style="width: 170px">
-                            <div class="footer-box  " >
-                                <div class="footer-box-content border border-danger d-flex p-2">
-                                    <p class="footer-paragrab m-1">Join us <br>
-                                        in building a <br>
-                                        better world.</p>
-                                    <i class="fa-solid fa-arrow-up m-1 "></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-7 mt-2 d-flex flex-column align-items-start justify-content-start">
-                    <h6>Royal Academy of Cambodia</h6>
-                    <p>Royal Academy of Cambodia MA, CMB</p>
+                <div class="col-lg-6 col-md-12  d-flex flex-column align-items-start justify-content-start" >
+                    <h6 class="footer-title">រាជបណ្ឌិត្យសភាកម្ពុជា​</h6>
                     <div class="row footer-ul-li-a gap-3 d-flex  w-100">
-                        <ul class="col-lg-12 d-flex gap-4 ">
+                        <ul class="col-lg-12 d-flex gap-3 footer-description">
                             <li><a href="">Visit</a></li>
                             <li><a href="">Map</a></li>
                             <li><a href="">Events</a></li>
@@ -46,25 +14,59 @@
                             <li><a href="">Contact</a></li>
                         </ul>
                     </div>
-                    <div class="row footer-ul-li-a d-flex w-100">
+                    <div class="row footer-ul-li-a d-flex  w-100">
                         <ul class="col-lg-12 gap-3 d-flex ">
                             <li><a href="">Privacy</a></li>
                             <li><a href="">Accessibility</a></li>
-                            <li><a href="">Social Media Hub</a></li>
-                            <li><a href=""><i class="fa-brands fa-x-twitter"></i></a></li>
-                            <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
-                            <li><a href=""><i class="fa-brands fa-youtube"></i></a></li>
-                            <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="" >SocialMediaHub</a></li>
+                            <li><a href="https://www.facebook.com/rac.gov.kh"><i class="fa-brands fa-facebook-f facebook"></i></a></li>
+                            <li><a href="https://www.youtube.com/channel/UCE2-mDBbetmonrNa7jIhwIA"><i class="fa-brands fa-youtube"></i></a></li>
                         </ul>
+
+                    </div>
+                </div>
+                <div class="col-lg-6  col-md-12  footer-menu-2 ">
+                    <div class="row footer-menu-item d-flex justify-content-between "  style="width: 100%">
+                        <div class="col-lg-8"  style="width: 70%">
+                            <div class="menu-footer-category d-flex">
+                                <ul class="footer-menu-txt-category m-0 p-0 " style=";white-space: nowrap;">
+                                    <li><a class="screen-360" href="" style="display: inline-block">ការអប់រំ</a></li>
+                                    <li><a class="screen-360" href="" style="display: inline-block">ជំនួយការចូលរៀន</a></li>
+                                    <li><a class="screen-360" href="" style="display: inline-block">អំពី RAC</a></li>
+                                </ul>
+                                <ul class="ms-2 footer-menu-txt-category " style="white-space: nowrap;">
+                                    <li><a class="screen-360" href="" style="display: inline-block">ស្រាវជ្រាវ</a></li>
+                                    <li><a class="screen-360" href="" style="display: inline-block">ជីវិតក្នុងបរិវេណសាលា</a></li>
+                                    <li><a class="screen-360" href="" style="display: inline-block">អតីតនិស្សិត</a></li>
+                                </ul>
+                                <ul class="ms-2 footer-menu-txt-category " style="white-space: nowrap;">
+                                    <li><a class="screen-360" href="" style="display: inline-block">ការច្នៃប្រឌិត</a></li>
+                                    <li><a class="screen-360" href="" style="display: inline-block">ព័ត៌មាន</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-4 " style="width: 170px">
+                            <div class="footer-box" >
+                                <div class="footer-box-content  border border-danger d-flex p-3" >
+                                    <p class="footer-paragrab m-1 text-nowrap">Join us <br>
+                                        in building a <br>
+                                        better world.</p>
+                                    <i class="fa-solid fa-arrow-up m-1 "></i>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="row footer-description-new ">
-        <div class="col-lg-12 ">
-            <p>© Copyright RAC . All Rights Reserved<br>
-                Designed by RAC</p>
+    <div class=" row ">
+        <div class="col-lg-12 d-flex flex-column  text-center education-footer-content-description ">
+            <div class="mt-5">
+                <h5 class="education-text-footer">@២០២៤​-រក្សាសិទ្ធិគ្រប់យ៉ាងដោយ​​ រាជបណ្ឌិត្យសភាកម្ពុជា​</h5>
+            </div>
+            <p class="education-text">អភិវឌ្ឍដោយ ការិយាល័យឌីជីថល នៃរាជបណ្ឌិត្យសភាកម្ពុជា</p>
         </div>
     </div>
 </footer>
@@ -75,15 +77,5 @@
 </script>
 @stack('script')
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script>
-// $(document).ready(function(){
-//   $("#myInput").on("keyup", function() {
-//     var value = $(this).val().toLowerCase();
-//     $("#mySearch").filter(function() {
-//       $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-//     });
-//   });
-// });
-</script>
 </body>
 </html>

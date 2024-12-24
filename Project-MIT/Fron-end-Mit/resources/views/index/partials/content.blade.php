@@ -23,7 +23,7 @@
                     <div class="scrol-down-text py-4 px-4">
                         <div class="scrol-img">
                             <img src="{{ asset('images/' . $Newmit->image) }}" class="img-fluid" alt="Education Image"
-                                style="width: 100%; height: 80vh;">
+                                style="width: 100%; height: 80vh;object-fit: cover">
                         </div>
                         <div class="ps-4 mt-4 d-none " style="width: 15%">
                             <h2 style="border-bottom: 1px solid red">{{ $Newmit->title }}</h2>
@@ -56,7 +56,7 @@
                         @if ($index >= 1 && $index <= 6)
                             <div class="col-md-12  col-lg-6">
                                 <img src="{{ asset('images/' . $Newmit->image) }}" alt="Image" class="image-fluid"
-                                    style="width: 100%; height: 40vh;">
+                                    style="width: 100%; height: 40vh;object-fit: cover">
                                 <div class="img-text mt-4">
                                     <h6 class="title-categories">{{ $Newmit->title }}</h6>
                                     <h6 class="img-text-hover  category-descrition-new">{{ $Newmit->description }}</h6>

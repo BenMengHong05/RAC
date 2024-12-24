@@ -14,11 +14,14 @@
                                 <h3>{{isset($categorie_imageEdit->id) ? "Update Categories_Path" : "Add Categories_Path "}}</h3>
                                 <div class="card h-100 p-4">
                                     <p class="card-text">
-                                        <form action="{{ isset($categorie_imageEdit) && $categorie_imageEdit->id ? route('categorie_path_update', $categorie_imageEdit->id) : route('categorie_image_store') }}" method="POST" enctype="multipart/form-data">
-                                            @csrf
-                                            @if (isset($categorie_imageEdit) && $categorie_imageEdit->id)
-                                                @method('PUT')
-                                            @endif
+                                        <form
+                                        action="{{ isset($categorie_imageEdit) && $categorie_imageEdit->id ? route('categorie_images.update', $categorie_imageEdit->id) : route('categorie_images.store') }}"
+                                        method="POST"
+                                        enctype="multipart/form-data">
+                                        @csrf
+                                        @if (isset($categorie_imageEdit) && $categorie_imageEdit->id)
+                                            @method('PUT')
+                                        @endif
 
                                             @if ($errors->any())
                                                 <div class="alert alert-danger">
@@ -52,7 +55,7 @@
                                             <button type="submit" class="btn btn-primary mx-2 float-end">
                                                 {{ isset($categorie_imageEdit->id) ? "Update" : "Submit" }}
                                             </button>
-                                            <a href="{{route('categorie_images')}}" class="btn btn-primary  float-end">Back to list</a>
+                                            <a href="{{route('categorie_images.index')}}" class="btn btn-primary  float-end">Back to list</a>
                                         </form>
                                     </p>
                                 </div>

@@ -963,7 +963,7 @@
                             @if ($index >= 0 && $index <= 0)
                                 <div class="col-lg-6" style="width: 100%">
                                     <figure>
-                                        <img style="height: 70vh;width: 100%;"
+                                        <img style="height: 70vh;width: 100%;object-fit: cover;"
                                             src="{{ asset('images/' . $category_image->image) }}"
                                             class="img-fluid img" alt="">
                                     </figure>

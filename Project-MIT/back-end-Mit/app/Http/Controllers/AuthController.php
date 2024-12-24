@@ -24,6 +24,7 @@ class AuthController extends Controller
         $credentials = $request->only("email", "password");
 
         if (Auth::attempt($credentials)) {
+            
             return redirect()->route('dashboard');
         }
         return redirect(route("login"))->with("error", "Login failed, please try again.");

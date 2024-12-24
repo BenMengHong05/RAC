@@ -1,14 +1,13 @@
 <footer class="education-footer container-fluid   ms-0 p-4">
     <div class=" education-footer-content row d-flex align-items-center justify-content-center " style="min-height: 18vh">
-        <div class="education-footer-content-logo  col-lg-2 d-flex align-items-start justify-content-center " style="min-width: 20vh;min-height: 18vh">
-            <img src="{{ url('images/rac_logo.png') }}" alt="" class="d-none d-lg-block "
+        <div class="education-footer-content-logo d-none d-lg-block  col-lg-2 d-flex align-items-start justify-content-center " style="min-width: 20vh;min-height: 18vh">
+            <img src="{{ url('images/rac_logo.png') }}" alt="" class=" "
                 style="width: 50%; height: 60%;">
         </div>
         <div class="col-lg-10 footer-menu ">
             <div class="row">
                 <div class="col-lg-6 col-md-12  d-flex flex-column align-items-start justify-content-start" >
                     <h6 class="footer-title">រាជបណ្ឌិត្យសភាកម្ពុជា​</h6>
-                    {{-- <p >រាជបណ្ឌិត្យសភាកម្ពុជា​ MA, CMB</p> --}}
                     <div class="row footer-ul-li-a gap-3 d-flex  w-100">
                         <ul class="col-lg-12 d-flex gap-3 footer-description">
                             <li><a href="">Visit</a></li>
@@ -183,8 +182,6 @@
     debugger: true,
   });
 </script>
-
 @stack('script')
 </body>
-
 </html>

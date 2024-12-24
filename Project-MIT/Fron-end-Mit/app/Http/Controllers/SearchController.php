@@ -20,9 +20,10 @@ class SearchController extends Controller
             if ($data->count() > 0) {
                 $output .= '<ul class="output-database-success​ pt-3 pb-3"  style="display:flex;flex-direction: column;align-items:start;justify-content:start;position:relative;">';
                 foreach ($data as $row) {
-                        $output .= '<li class="output-database-item​ text-start ​py-3  d-flex align-items-start justify-content-start​ "> <a href="#" class="text-dark link-search "> '. $row->title . '</a></li>';
+                        $output .= '<li class="output-database-item​ text-start ​py-3  d-flex align-items-start justify-content-start"> <a href="#" class="text-secondary link-search "> '. $row->title . '</a></li>';
                 }
                 $output .= '</ul>';
+                $output .= '<a href=""><li class="output-database-item-desc bg-dark text-white py-4 d-flex align-items-center justify-content-center ">See More Results</li></a>';
             } else {
                 $output .= '<li class="output-database-item">No results found.</li>';
             }

@@ -21,7 +21,7 @@
             @endif
             <div class="car-header d-flex mt-3 align-items-center justify-content-between" style="min-height: 7vh">
                 <div class="add d-flex align-items-center gap-4 ms-4 " style="width: 60%">
-                    <form action="{{ route('categorie_image_search') }}" method="GET" class="d-flex" id="server-search-form">
+                    <form action="{{ route('categorie_images.search') }}" method="GET" class="d-flex" id="server-search-form">
                         <input type="text" class="form-control" name="search" id="search-input"
                                value="{{ request('search') }}" placeholder="{{__('messages.Search')}}" style="width: 100%">
                         <button class="btn btn-primary mx-2 ps-3 px-3" style="white-space: nowrap" type="submit">
@@ -29,7 +29,7 @@
                         </button>
                     </form>
                 </div>
-                <form action="{{ route('categorie_image_create') }}" class="ps-2 " method="GET">
+                <form action="{{ route('categorie_images.create') }}" class="ps-2 " method="GET">
                     @csrf
                     <button type="submit" class="btn btn-success ps-3 px-3 mx-4">
                         <i class='bx bx-plus'></i>
@@ -67,14 +67,14 @@
                                             </button>
                                             <div class="dropdown-menu">
                                                 <a class="dropdown-item"
-                                                    href="{{ route('categorie_images_show', $categorie_image->id) }}"><i
+                                                    href="{{ route('categorie_images.show', $categorie_image->id) }}"><i
                                                         class="bx bx-duplicate me-1"></i>{{ __('messages.Detail') }}
                                                 </a>
                                                 <a class="dropdown-item"
-                                                    href="{{ route('categorie_image_edit', $categorie_image->id) }}"><i
+                                                    href="{{ route('categorie_images.edit', $categorie_image->id) }}"><i
                                                         class="bx bx-edit-alt me-1"></i>{{ __('messages.Edit') }} </a>
                                                 <form id="delete-form-{{ $categorie_image->id }}"
-                                                    action="{{ route('categorie_image_delete', ['id' => $categorie_image->id]) }}"
+                                                    action="{{ route('categorie_images.delete', ['id' => $categorie_image->id]) }}"
                                                     method="POST" style="display: inline;">
                                                     @csrf
                                                     @method('DELETE')

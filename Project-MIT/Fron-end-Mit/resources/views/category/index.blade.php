@@ -1,4 +1,4 @@
-@extends('layouts.master2')
+@extends('layouts.master1')
 @section('content')
     @include('category.includes.body')
 @endsection

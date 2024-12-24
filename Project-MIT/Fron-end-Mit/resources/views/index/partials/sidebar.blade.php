@@ -1,16 +1,21 @@
+
 <div class="sider-box" id="sider-box">
     <div class="sider-search position-relative" id="sider-search ">
         <div class="menu">
         </div>
-        <h6 class="ms-4 siderbar-search  ">Explore websites, people, and locations</h6>
-        <div class="input-icon ms-4  d-flex align-items-center" style="position: relative;">
-            <i class="fa-solid fa-magnifying-glass  fs-3 text-danger mt-1 ps-3" style="margin-right: 1rem;"></i>
-            <input type="text" onfocus="searchsiderbarjs()" class="border-0  shadow-none search-input"
-                id="searchInput" placeholder="ស្វែងរក" aria-label="ស្វែងរក"
-                style="padding-left: 4rem;background-color: rgba(51, 50, 50, 0.05)" />
+        <div class="position-relative ps-4" style="width: 90%">
+            <h6 class="siderbar-search  ">Explore websites, people, and locations</h6>
+            <div class="input-icon   d-flex align-items-center" style="position: relative;">
+                <i class="fa-solid fa-magnifying-glass ps-3  fs-3 text-danger mt-1 " ></i>
+                <input type="search" onfocus="searchsiderbarjs()" class="border-0  shadow-none search-input"
+                    id="searchInput" placeholder="ស្វែងរក" aria-label="ស្វែងរក"
+                    style="width: 100%;padding-left: 4rem;padding-right: 2rem;background-color: rgba(51, 50, 50, 0.05)" />
             </div>
-            <div id="results" class="output-database-item mx-4  " style="height: auto;width: 87.5%;background-color: rgb(236, 236, 236)" >
+            <div id="results" class="output-database-item"
+                style="height: auto;width: 100%;background-color: rgba(237, 237, 237)">
+
             </div>
+        </div>
     </div>
     <div class="sider-menu mt-4 " id="sider-menu">
         <div class="menu-a">
@@ -85,6 +90,7 @@
     </div>
 </div>
 
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script>
     $(document).ready(function() {
@@ -102,11 +108,13 @@
                     },
                     error: function(xhr, status, error) {
                         console.error('Error:', error);
-                        $('#results').html('<li class="output-database-item">Text Not Found</li>');
+                        $('#results').html(
+                            '<li class="output-database-item">Text Not Found</li>');
                     }
                 });
             } else {
-                $('#results').empty();
+                $('#results').html
+                ("");
             }
         });
     });

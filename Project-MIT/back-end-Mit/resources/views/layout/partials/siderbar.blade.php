@@ -1,7 +1,7 @@
 
 <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme" style="min-width: 18%">
     <div class="app-brand demo " style="min-height: 12%;width: 100%">
-        <a href="index.html" class="app-brand-link d-flex align-items-center justify-content-center  w-100">
+        <a href="/dashboard" class="app-brand-link d-flex align-items-center justify-content-center  w-100">
             <span class="app-brand-logo demo ">
                 <img src="{{ asset('image/mit_logo.png') }}" class="img-fluid" alt="" style="height: 10vh">
             </span>

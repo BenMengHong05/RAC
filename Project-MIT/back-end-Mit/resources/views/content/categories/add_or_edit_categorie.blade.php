@@ -15,12 +15,13 @@
                                 <div class="card h-100 p-4">
                                     <p class="card-text">
                                     <form
-                                        action="{{ isset($categorieEdit) && $categorieEdit->id ? route('categorie_update', $categorieEdit->id) : route('categorie_store') }}"
-                                        method="POST" enctype="multipart/form-data">
-                                        @csrf
-                                        @if (isset($categorieEdit) && $categorieEdit->id)
-                                            @method('PUT')
-                                        @endif
+                                    action="{{ isset($categorie_imageEdit) && $categorie_imageEdit->id ? route('categorie_images.update', $categorie_imageEdit->id) : route('categorie_images.store') }}"
+                                    method="POST"
+                                    enctype="multipart/form-data">
+                                    @csrf
+                                    @if (isset($categorie_imageEdit) && $categorie_imageEdit->id)
+                                        @method('PUT')
+                                    @endif
                                         @if ($errors->any())
                                             <div class="alert alert-danger">
                                                 <ul>
